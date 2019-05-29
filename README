@@ -1,0 +1,13 @@
+NOTE ON VERSIONING
+
+To maintain versions:
+
+  1. Edit file header for next version (include description)
+
+  2. Complete code changes.
+
+  3. Copy file into "previous versions" subdirectory, rename with version
+     number.
+
+     TODO: Set up a git repo for this.
+     

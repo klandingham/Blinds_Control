@@ -1,0 +1,17 @@
+- - - - -
+Tue 21 Aug 2018 08:42:34 PM EDT 
+See notes in source file header for v0.4 ... I'm giving up on trying to use long-presses to do calibration. I'm going to try to add another button to go into "calibration mode". When in cal mode I want an LED to flash. Input sequence I'm thinking of: press CAL button (LED begins flashing), press CLOSE to close blinds, press OPEN to open blinds, release OPEN (I save the duration), press CAL again to exit CAL mode. From this point, open/close buttons should use the measured interval.
+- - - - -
+Sun 19 Aug 2018 10:29:17 PM EDT
+Working on version 0.4 - button logic still not working right. Pressing and holding OPEN button starts motor in open direction as desired. Releasing button is recording elapsed time correctly. But a subsequent normal press should advance the motor for the measured time. Right now nothing happens.
+- - - - -
+Sun 19 Aug 2018 04:48:42 PM EDT 
+Started command logic processing. All cases there but not compiled yet. Also need to debug. Still need to package the motor drive code into callable method.
+- - - - -
+Sun 19 Aug 2018 02:50:50 PM EDT
+Button processing/debouncing function finished and tested. Next: add actual motor driver methods.
+- - - - -
+Sat 18 Aug 2018 08:34:43 PM EDT 
+Currently working on Blinds_Control.ino, adding button processing logic - left off at line 82 (too tired to continue right now.)
+- - - - -
+
