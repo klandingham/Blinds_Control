@@ -1,0 +1,13 @@
+Measurements of LED pushbuttons at desired brightnesses.
+
+Drop resistor calculations: Vsupply - Vled / Iled
+
+        Voltage Drop    Forward Current     Drop Resistor (@ 12V)
+Blue      0.1 V              0.1 mA             100K
+Green     1.9 V              2.4 mA             4K3
+Red       1.7 V              0.15 mA            68K
+
+Blue LED to be controlled by D1, but inverted. See Fritzing schematic
+in this folder. D1 is to be NORMALLY HIGH, flash by setting it LOW
+periodically (invert current logic).
+
