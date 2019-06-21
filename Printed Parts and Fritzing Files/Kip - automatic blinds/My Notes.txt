@@ -1,0 +1,33 @@
+
+NOTE: UPDATE THIS README AS PROGRESS IS MADE!
+NOTE: UPDATE THIS README AS PROGRESS IS MADE!
+NOTE: UPDATE THIS README AS PROGRESS IS MADE!
+
+
+Identifying parts:
+
+	blind rod sleeve - the stem plate with the hexagonal hole which slides onto the blind rod.
+	motor drive hub  - the solid cylinder that attaches to the stepper motor shaft
+	spring cup       - the large hollow cylinder that houses the spring and the other parts.
+
+Assembly:
+
+	Slip the blind rod sleeve into the spring cup so that its stem protrudes from the hole in closed end of the sleeve.  Insert spring.  Attach the motor drive hub to the stepper motor using a hex set screw. Push the mounted motor hub into the spring cup.  Insert a cotter pin through one of the holes in the spring cup and then through the top hole (farthest from the motor).  Choose one of the holes in the spring cup to obtain the desired friction.
+
+Parts still needed:
+
+	1. Cottor pins (or something equivalent)
+	2. Hex set screws
+	3. Compression springs (may need to wind these myself)
+
+Mod Notes:
+
+1.	The hex opening in the original blind rod sleeve wasn't large enough for my blind rods.  I modded the design to fit using a larger hexagon for the hole - use "Blind Drive Hub Mod - 7.9.stl" - this fits snugly but will still slide on the rod.
+
+2.	Because the outside diameter of the haft of the modded blind rod sleeve is larger than the original, the hole in the end of the spring cup must be made larger so the shaft will fit through it.  Have not done this mod yet.
+
+3.	The outside circumferences of both the blind rod sleeve and the motor drive hub are binding inside the spring cup, probably due to 3D printing inaccuracies.  Both of these diameters need to be slightly reduced, so that both parts will spin freely inside the spring cup.  I can probably accomplish this by using a very thin cylinder shape to take away a bit of the circumference.  This mod has not been done yet.
+
+4.	Because my stepper motors have short drive shafts, I can't get the motor drive hub deep enough into the spring cup to engage the last few tension adjustment holes.  I need to figure out how to mod the hub so that it will go deeper into the spring cup.  I don't want to simply make the entire cylinder taller if I can help it, because this is a solid part and that will use that much more filament.
+
+
