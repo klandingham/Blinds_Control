@@ -1,0 +1,8 @@
+12:58 PM 7/14/2019
+
+This is an interim sizing template for the entire inset
+that will go into the inside top of the cover.
+
+I am using it to visually determine what the size and
+placement will be for the corner mounting posts for the
+board.

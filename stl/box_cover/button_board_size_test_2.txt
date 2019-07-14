@@ -1,0 +1,5 @@
+2:54 PM 7/14/2019
+
+Follow-on sizing plate for button board.
+
+Contains test locations for corner mounting pads.
