@@ -1,0 +1,42 @@
+=================================================================
+6:35 PM 7/14/2019
+- - - - -
+Still working on the cover - just finished test print for button board that will be
+placed inside the box on the top.
+
+I very much want to add IR remote control to the circuit. I also want to switch from
+using a NodeMCU ESP3266 board to using one of the cheap WAVGAT Arduino clone boards
+I bought. This will involve either adjusting the existing buck converter to output
+5V or replacing it. I will still power the entire circuit with 12V.
+
+I need to breadboard a WAVGAT to test this. But I don't have any more shift registers
+to use. I ordered 10 today. When they come in, I'll breadboard a similar circuit
+as a test, using just one shift register. I also will have to convert the code to
+1) use the WAVGAT pinouts instead of the NodeMCU ones, and 2) incorporate IR control
+(see the IR demo I have running for the WAVGAT.
+
+=================================================================
+Tue 21 Aug 2018 08:42:34 PM EDT 
+- - - - -
+See notes in source file header for v0.4 ... I'm giving up on trying to use long-presses to do calibration. I'm going to try to add another button to go into "calibration mode". When in cal mode I want an LED to flash. Input sequence I'm thinking of: press CAL button (LED begins flashing), press CLOSE to close blinds, press OPEN to open blinds, release OPEN (I save the duration), press CAL again to exit CAL mode. From this point, open/close buttons should use the measured interval.
+
+=================================================================
+Sun 19 Aug 2018 10:29:17 PM EDT
+- - - - -
+Working on version 0.4 - button logic still not working right. Pressing and holding OPEN button starts motor in open direction as desired. Releasing button is recording elapsed time correctly. But a subsequent normal press should advance the motor for the measured time. Right now nothing happens.
+
+=================================================================
+Sun 19 Aug 2018 04:48:42 PM EDT 
+- - - - -
+Started command logic processing. All cases there but not compiled yet. Also need to debug. Still need to package the motor drive code into callable method.
+
+=================================================================
+Sun 19 Aug 2018 02:50:50 PM EDT
+- - - - -
+Button processing/debouncing function finished and tested. Next: add actual motor driver methods.
+
+=================================================================
+Sat 18 Aug 2018 08:34:43 PM EDT 
+- - - - -
+Currently working on Blinds_Control.ino, adding button processing logic - left off at line 82 (too tired to continue right now.)
+
