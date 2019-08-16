@@ -2,22 +2,29 @@
 
   Blinds_Control (WAVGAT version)
 
+    8/16/19 - Some kind of logic error is happening. After calibration, open/close buttons will work OK a few times, but eventually they stop
+    working. Something similar happens if I press OPEN after an open operation has finished (may be the same error).
+
     8/14/19 - This is a work-in-progress. Modifying code to work with breadboarded WAVGAT UNO R3 (Chinese Arduino copy). Not much is working
     yet - right now trying to get pushbuttons to trigger properly.
 */
 #include "BoardSelect.h"
 #ifdef WAVGAT
 
+// #define DEBUG
 #include <Arduino.h>
 
+// function declarations
+void TraceButton(uint8_t buttonID);
+
 // pin assignments
-const int latchPin = 2;  // pin 12 on the 75HC595
-const int clockPin = 5;  // pin 11 on the 75HC595
-const int dataPin  = 7;  // pin 14 on the 75HC595
-const int calibrateLEDPin = 0;
-const int closeButton = 8;
-const int openButton  = 6;
-const int calibrateButton = 1;
+const uint8_t latchPin = 2;  // pin 12 on the 75HC595
+const uint8_t clockPin = 5;  // pin 11 on the 75HC595
+const uint8_t dataPin  = 7;  // pin 14 on the 75HC595
+const uint8_t calibrateLEDPin = 3;
+const uint8_t closeButton = 8;
+const uint8_t openButton  = 6;
+const uint8_t calibrateButton = 4;
 
 // Motor drive modes
 enum CommandState {
@@ -32,6 +39,12 @@ CommandState command = STOP;
 
 int autoTimeInterval; // this is the measured time to move from opened to closed and vice-versa
 int autoStartTime;    // time at which a manual OPEN is started - used to measure required auto interval
+
+/*
+  If loop is too fast, stepper motors may not be able to keep up. This delay is added to alleviate that.
+  It will need to be tuned for optimum operation.
+*/
+unsigned long motorSequenceDelay = 7;  // milliseconds
 
 bool calibrating = false;
 unsigned calibrateFlashTime;
@@ -117,10 +130,27 @@ int lastCloseButtonState = 0;
 int openButtonState = 0;
 int lastOpenButtonState = 0;
 
+#ifdef DEBUG
+  static long loopCount = 0;
+#endif
+
 //////////////////////////////////////////////////////////////////////////////
 void loop() {
-  static int autoStartTime; // the time at which an auto-open/close op begins
 
+#ifdef DEBUG
+  Serial.print("Loop: ");
+  Serial.println(loopCount++);
+  delay(2000);
+#endif
+
+  // TODO: REMOVE static int autoStartTime; // the time at which an auto-open/close op begins
+
+  // debug button states
+#ifdef DEBUG
+  TraceButton(closeButton);
+  TraceButton(openButton);
+  TraceButton(calibrateButton);
+#endif
   //
   //
   // Check state of calibrate button
@@ -303,5 +333,18 @@ void loop() {
   // Note: had a delay in here because the steppers were skipping. Increased the
   // stepper power voltage from 5 to 12V. No delay is necessary now (the stepper
   // motors can keep up with the code.)
+  delay(motorSequenceDelay);
 } // loop()
+
+/**
+ * Output button state to serial (for debugging)
+ */
+void TraceButton(uint8_t buttonID) {
+  int buttonState = digitalRead(buttonID);
+  String buttonStateText = buttonState ? "HIGH" : "LOW";
+  Serial.print("Button pin ");
+  Serial.print(buttonID);
+  Serial.print(" is ");
+  Serial.println(buttonStateText);
+}
 #endif
