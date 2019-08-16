@@ -1,3 +1,11 @@
+NOTE: add timestamps with :r!date
+=================================================================
+Fri Aug 16 00:57:11 EDT 2019
+- - - - -
+Now working on WAVGAT version. When that is working, will try to
+add IR remote control.
+
+
 =================================================================
 6:35 PM 7/14/2019
 - - - - -

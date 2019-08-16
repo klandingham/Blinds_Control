@@ -1,6 +1,6 @@
 /*
 
-  Blinds_Control
+  Blinds_Control (NodeMCU version)
 
   Controls 28BYJ-48 stepper motors via shift registers to
   open/close window blinds.
@@ -8,14 +8,12 @@
   See history.txt
 
 */
+#include "BoardSelect.h"
+#ifdef NODE_MCU
 
 #include <Arduino.h>
 
-// default pin setup is for Arduino. For NodeMCU, uncomment #define below
-// #define NODE_MCU
-
 // pin assignments
-#ifdef NODE_MCU
 const int latchPin = D2;  // pin 12 on the 75HC595
 const int clockPin = D5;  // pin 11 on the 75HC595
 const int dataPin  = D7;  // pin 14 on the 75HC595
@@ -23,15 +21,6 @@ const int calibrateLEDPin = D1;
 const int closeButton = D8;
 const int openButton  = D6;
 const int calibrateButton = D0;
-#else
-const int latchPin = 2;  // pin 12 on the 75HC595
-const int clockPin = 5;  // pin 11 on the 75HC595
-const int dataPin  = 7;  // pin 14 on the 75HC595
-const int calibrateLEDPin = 1;
-const int closeButton = 8;
-const int openButton  = 6;
-const int calibrateButton = 0;
-#endif
 
 // Motor drive modes
 enum CommandState {
@@ -318,3 +307,5 @@ void loop() {
   // stepper power voltage from 5 to 12V. No delay is necessary now (the stepper
   // motors can keep up with the code.)
 } // loop()
+
+#endif
