@@ -11,7 +11,7 @@
 #include "BoardSelect.h"
 #ifdef WAVGAT
 
-// #define DEBUG
+// #define DEBUG_COMMAND
 #include <Arduino.h>
 
 // function declarations
@@ -37,8 +37,8 @@ enum CommandState {
 
 CommandState command = STOP;
 
-int autoTimeInterval; // this is the measured time to move from opened to closed and vice-versa
-int autoStartTime;    // time at which a manual OPEN is started - used to measure required auto interval
+unsigned long autoTimeInterval; // this is the measured time to move from opened to closed and vice-versa
+unsigned long autoStartTime;    // time at which a manual OPEN is started - used to measure required auto interval
 
 /*
   If loop is too fast, stepper motors may not be able to keep up. This delay is added to alleviate that.
@@ -47,9 +47,9 @@ int autoStartTime;    // time at which a manual OPEN is started - used to measur
 unsigned long motorSequenceDelay = 7;  // milliseconds
 
 bool calibrating = false;
-unsigned calibrateFlashTime;
+unsigned long calibrateFlashTime;
 bool calibrateLEDOn = false;
-unsigned lastLoopTime = 0;
+unsigned long lastLoopTime = 0;
 
 // Values for two-phase, full-step operation (AB->BC->CD->DA)
 const int fullStepValueCount = 4;
@@ -101,7 +101,7 @@ void SendNextSequence(boolean opening) {
 //////////////////////////////////////////////////////////////////////////////
 void setup() {
 
-  Serial.begin(9600);
+  // Serial.begin(9600);
 
   pinMode(closeButton, INPUT);
   pinMode(openButton, INPUT);
@@ -118,8 +118,8 @@ void setup() {
   stepIndex = 0;
 } // setup()
 
-unsigned autoOpTime;
-int calibrationStartTime;
+unsigned long autoOpTime;
+unsigned long calibrationStartTime;
 boolean autoOpInProgress = false;
 boolean calibrationInProgress = false;
 
@@ -138,12 +138,10 @@ int lastOpenButtonState = 0;
 void loop() {
 
 #ifdef DEBUG
-  Serial.print("Loop: ");
-  Serial.println(loopCount++);
-  delay(2000);
+  // Serial.print("Loop: ");
+  // Serial.println(loopCount++);
+  // delay(500);
 #endif
-
-  // TODO: REMOVE static int autoStartTime; // the time at which an auto-open/close op begins
 
   // debug button states
 #ifdef DEBUG
@@ -157,9 +155,13 @@ void loop() {
   //
   calibrateButtonState = digitalRead(calibrateButton);
   if (calibrateButtonState != lastCalibrateButtonState) {
-    Serial.println("CALIBRATE BUTTON");
+    // Serial.println("CALIBRATE BUTTON");
     if (calibrateButtonState == HIGH) {
       calibrating = !calibrating;
+#ifdef DEBUG
+      Serial.print("CALIBRATING: ");
+      Serial.println(calibrating);
+#endif
     }
   }
   lastCalibrateButtonState = calibrateButtonState;
@@ -196,18 +198,21 @@ void loop() {
   //
   closeButtonState = digitalRead(closeButton);
   if (closeButtonState != lastCloseButtonState) {
-    Serial.println("CLOSE BUTTON");
+    // Serial.println("CLOSE BUTTON");
     if (calibrating) {
       if (closeButtonState == HIGH) {
         command = CLOSE;
+        // Serial.println("COMMAND set to CLOSE");
       }
       else {
         command = STOP;
+        // Serial.println("COMMAND set to STOP");
       }
     }
     else { // else not calibrating
       if ((closeButtonState == HIGH) && (command != AUTO_CLOSE)) {
         command = AUTO_CLOSE;
+        // Serial.println("COMMAND set to AUTO_CLOSE");
       }
     }
   }
@@ -257,11 +262,13 @@ void loop() {
         calibrationStartTime = millis();
       } // end if not measuring yet
       command = OPEN;
+      // Serial.println("COMMAND set to OPEN");
     } // if button is pressed
     else { // else button is not pressed
       if (calibrationInProgress) { // if currently measuring
         autoOpTime = millis() - calibrationStartTime;
         command = STOP;
+        // Serial.println("COMMAND set to STOP");
         calibrationInProgress = false;
         calibrating = false;
       } // end if currently measuring
@@ -269,9 +276,9 @@ void loop() {
   } // end if calibrating
   else { // else if not calibrating
     if (openButtonState != lastOpenButtonState) { // if button just changed state
-      Serial.println("OPEN BUTTON");
       if ((openButtonState == HIGH) && (command != AUTO_CLOSE)) { // if button pressed and we're not already in AUTO_OPEN mode
         command = AUTO_OPEN;
+        // Serial.println("COMMAND set to AUTO_OPEN");
       }
     } // end if button just changed state
   } // end else not calibrating
@@ -297,9 +304,15 @@ void loop() {
     } // if this is new auto command
     else { // else an auto open/close is already in progress
       if ((millis() - autoStartTime) >= autoOpTime) { // if auto time satisfied
+        // Serial.print("autoStartTime = ");
+        // Serial.println(autoStartTime);
+        // Serial.print("autoOpTime = ");
+        // Serial.println(autoOpTime);
+
         autoOpInProgress = false;
         autoStartTime = 0;
         command = STOP;
+        // Serial.println("COMMAND set to STOP");
       }
       else {
         SendNextSequence(false);
@@ -317,6 +330,7 @@ void loop() {
         autoOpInProgress = false;
         autoStartTime = 0;
         command = STOP;
+        // Serial.println("COMMAND set to STOP");
       }
       else {
         //      Serial.println("Continuing auto op");
@@ -334,6 +348,10 @@ void loop() {
   // stepper power voltage from 5 to 12V. No delay is necessary now (the stepper
   // motors can keep up with the code.)
   delay(motorSequenceDelay);
+#ifdef DEBUG_COMMAND
+  //Serial.print("At bottom of loop, COMMAND = ");
+  //Serial.println(command);
+#endif
 } // loop()
 
 /**
@@ -342,9 +360,9 @@ void loop() {
 void TraceButton(uint8_t buttonID) {
   int buttonState = digitalRead(buttonID);
   String buttonStateText = buttonState ? "HIGH" : "LOW";
-  Serial.print("Button pin ");
-  Serial.print(buttonID);
-  Serial.print(" is ");
-  Serial.println(buttonStateText);
+  // Serial.print("Button pin ");
+  // Serial.print(buttonID);
+  // Serial.print(" is ");
+  // Serial.println(buttonStateText);
 }
 #endif

@@ -1,5 +1,11 @@
 NOTE: add timestamps with :r!date
 =================================================================
+Sun Aug 18 16:23:57 EDT 2019
+- - - - -
+Fixed bug with logic - timing-related variables were rolling over
+to negative numbers - changed all to unsigned long.
+
+=================================================================
 Fri Aug 16 09:08:20 EDT 2019
 - - - - -
 WAVGAT code now working nominally.
