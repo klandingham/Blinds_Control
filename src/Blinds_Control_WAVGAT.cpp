@@ -2,17 +2,21 @@
 
   Blinds_Control (WAVGAT version)
 
+    8/19/19 - Previous error caused by my using ints to record elapsed times - they were rolling over to negative values and messing up the
+    logic. Now have remote control working also.
+
     8/16/19 - Some kind of logic error is happening. After calibration, open/close buttons will work OK a few times, but eventually they stop
     working. Something similar happens if I press OPEN after an open operation has finished (may be the same error).
 
     8/14/19 - This is a work-in-progress. Modifying code to work with breadboarded WAVGAT UNO R3 (Chinese Arduino copy). Not much is working
     yet - right now trying to get pushbuttons to trigger properly.
 */
-#include "BoardSelect.h"
+#include "CodeSelect.h"
 #ifdef WAVGAT
 
 // #define DEBUG_COMMAND
 #include <Arduino.h>
+#include <IRremote.h>
 
 // function declarations
 void TraceButton(uint8_t buttonID);
@@ -25,6 +29,7 @@ const uint8_t calibrateLEDPin = 3;
 const uint8_t closeButton = 8;
 const uint8_t openButton  = 6;
 const uint8_t calibrateButton = 4;
+const uint8_t IRRecvPin = 9;
 
 // Motor drive modes
 enum CommandState {
@@ -61,6 +66,14 @@ int TF_stepperValues123[4] = {3276,  1638,  819, 2457};
 int stepIndex;
 
 bool isOpening = true;
+
+// define IR receiver and results objects
+IRrecv irrecv(IRRecvPin);
+decode_results results;
+unsigned long IRvalue;
+// unsigned long lastIRvalue;
+unsigned long IRCmdClose = 0x2FD807F;
+unsigned long IRCmdOpen = 0x2FD40BF;
 
 //////////////////////////////////////////////////////////////////////////////
 // If in the middle of a motor sequence and command becomes stop, we could be
@@ -112,6 +125,8 @@ void setup() {
   pinMode(clockPin, OUTPUT);
   pinMode(calibrateLEDPin, OUTPUT);
 
+  irrecv.enableIRIn();
+
   command = STOP;
   calibrateFlashTime = 125; // mS
   digitalWrite(calibrateLEDPin, LOW);
@@ -130,21 +145,29 @@ int lastCloseButtonState = 0;
 int openButtonState = 0;
 int lastOpenButtonState = 0;
 
-#ifdef DEBUG
+#ifdef MY_DEBUG
   static long loopCount = 0;
 #endif
 
 //////////////////////////////////////////////////////////////////////////////
 void loop() {
 
-#ifdef DEBUG
+#ifdef MY_DEBUG
   // Serial.print("Loop: ");
   // Serial.println(loopCount++);
   // delay(500);
 #endif
 
+  // read IR code if there is one
+  IRvalue = 0;
+  if (irrecv.decode(&results)) {
+    IRvalue = results.value;
+    // Serial.println(results.value, HEX);
+    irrecv.resume();
+  }
+
   // debug button states
-#ifdef DEBUG
+#ifdef MY_DEBUG
   TraceButton(closeButton);
   TraceButton(openButton);
   TraceButton(calibrateButton);
@@ -158,7 +181,7 @@ void loop() {
     // Serial.println("CALIBRATE BUTTON");
     if (calibrateButtonState == HIGH) {
       calibrating = !calibrating;
-#ifdef DEBUG
+#ifdef MY_DEBUG
       Serial.print("CALIBRATING: ");
       Serial.println(calibrating);
 #endif
@@ -217,38 +240,6 @@ void loop() {
     }
   }
   lastCloseButtonState = closeButtonState;
-
-
-  // TODO: handle OPEN button (must do timing)
-
-/*
-  // while calibrating, don't need to know if button changed,
-  // just need to know if it's pressed or not
-  if calibrating
-    if button HIGH (pressed)
-      if already measuring
-        open -> command
-      else
-        true -> measuring
-        set start time
-        open -> command
-      fi
-    else // button is LOW
-      if already measuring // always true?
-        duration = now - start time
-        stop -> command
-        false -> measuring
-        false -> calibrating
-      fi
-      // ? need case for not already measuring?
-    end else button is LOW
-  end if calibrating
-  else // not calibrating
-    false -> measuring
-    0 -> start time
-    handle OPEN button as in CLOSE case
-*/
-
   //
   //
   // Read OPEN button. If in calibrate mode and button pressed,
@@ -276,18 +267,26 @@ void loop() {
   } // end if calibrating
   else { // else if not calibrating
     if (openButtonState != lastOpenButtonState) { // if button just changed state
-      if ((openButtonState == HIGH) && (command != AUTO_CLOSE)) { // if button pressed and we're not already in AUTO_OPEN mode
+      if ((openButtonState == HIGH) && (command != AUTO_OPEN)) { // if button pressed and we're not already in AUTO_OPEN mode
         command = AUTO_OPEN;
-        // Serial.println("COMMAND set to AUTO_OPEN");
       }
     } // end if button just changed state
   } // end else not calibrating
   lastOpenButtonState = openButtonState;
-
-
-
-
-
+  //
+  //
+  // Check for IR command
+  //
+  if (!calibrating) { // ignore IR commands when calibrating
+    if (IRvalue != 0) { // if IR command received
+      if ((IRvalue == IRCmdClose) && (command != AUTO_CLOSE)) {
+        command = AUTO_CLOSE;
+      }
+      else if ((IRvalue == IRCmdOpen) && (command != AUTO_OPEN)) {
+        command = AUTO_OPEN;
+      }
+    } // if IRvalue has changed
+  } // if (!calibrating)
   //
   //
   // Command processing. Note we only measure time during an OPEN
@@ -348,7 +347,7 @@ void loop() {
   // stepper power voltage from 5 to 12V. No delay is necessary now (the stepper
   // motors can keep up with the code.)
   delay(motorSequenceDelay);
-#ifdef DEBUG_COMMAND
+#ifdef MY_DEBUG
   //Serial.print("At bottom of loop, COMMAND = ");
   //Serial.println(command);
 #endif

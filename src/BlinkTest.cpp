@@ -10,7 +10,7 @@
   model, check the Technical Specs of your board at:
   https://www.arduino.cc/en/Main/Products
 
-  modified 8 May 2014
+  modified 8 May 2015
   by Scott Fitzgerald
   modified 2 Sep 2016
   by Arturo Guadalupi
@@ -21,8 +21,8 @@
 
   http://www.arduino.cc/en/Tutorial/Blink
 */
-#include "BoardSelect.h"
-#ifdef TESTCODE
+#include "CodeSelect.h"
+#ifdef BLINK_TEST
 
 #include <Arduino.h>
 
