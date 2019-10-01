@@ -1,0 +1,28 @@
+
+One Phase On - Full Step
+A B C D
+=======
+1 0 0 0
+0 1 0 0
+0 0 1 0
+0 0 0 1
+
+Two Phase On - Full Step
+A B C D
+=======
+1 1 0 0
+0 1 1 0
+0 0 1 1
+1 0 0 1
+
+One/Two Phase On - Half Step
+A B C D
+=======
+1 0 0 0
+1 1 0 0
+0 1 0 0
+0 1 1 0
+0 0 1 0
+0 0 1 1
+0 0 0 1
+1 0 0 1

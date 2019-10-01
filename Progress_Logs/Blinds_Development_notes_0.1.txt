@@ -1,0 +1,93 @@
+==============================================================================
+Development Notes for Automatic Window Blinds
+
+Version 0.1 - Servo motor solution - abandoned due to test servo motor
+shorting out after only minimal testing. Decided these servos are not reliable
+enough. Going back to a stepper motor approach.
+
+==============================================================================
+
+
+==============================================================================
+STATUS: Just finished speed selection test sketch. Varies servo value across
+a fixed array of values via pushbutton presses. Noted that pb needs real
+debouncing! (see Debounce example).
+==============================================================================
+==============================================================================
+NEXT TASK:
+
+Modify the speed selection sketch to use one "medium" speed value. Change the
+button logic to switch a transistor - see if I can turn the servo on/off via
+the button.
+Need to find a suitable transistor (test manually with the speed selection
+sketch running on high speed).
+
+==============================================================================
+
+
+Decided to use servo motors instead of steppers. Will use clutch assemblies
+already printed, driven directly by motors. Will need to design and print
+a new base part that can attach to one of the horns supplied with the servo.
+
+Current operation design:
+	3 pushbuttons:
+		1 - servo selection
+		2 - close button
+		3 - open button
+
+Open/close buttons will operate on timeout:
+	close button pushed:
+		wait 1 second
+		if close button still pushed
+			move in close direction until close button released
+		else
+			send measured close
+	open button pushed:
+		wait 1 second
+		if open button still pushed
+			zero out open interval for all enabled servos
+			move in open direction until open button released
+			on release save measured interval for enabled servos
+		else
+			send measured open
+
+DONE: ServoDutyCycle.ino varies duty cycle (DC) to servo using potentiometer.
+Need to add serial output to show DC values as I adjust the pot. Then pick
+one or two DC values each for forward/reverse and save these for the final
+sketch. 8/13 update: after experimentation with this sketch, found that only
+a few values were usable for the blinds project. Here are the speeds and
+values (as args to analogWrite() in the sketch) I found:
+
+	fast CCW = 67 to 68
+	med  CCW = 69 to 70
+	slow CCW = 71 to 72
+	stop     = 73 to 76 (will probably disable trasistors instead)
+	slow  CW = 77 to 78
+	med   CW = 79 to 80
+	fast  CW = 81 to 82
+
+TODO: Write a "speed select" test to see if I can cycle through each
+of these fixed speed values by repeatedly pressing a button.
+
+
+Servo Switching Transistors:
+Measured SM-S4306 servo under load: min 0.5 A xsistors should handle the
+current.
+
+DONE: Want to enable/disable each servo by switching power to each using a
+control transistor. Need to measure current draw (under load) of servo in
+both directions to determine current requirements that will be required
+of these transistors.
+
+TODO: Need to come up with code that will allow enabling of servos using
+repetitive presses of a single selection button. Will need to step through
+each combination, something like:
+
+	0 0 0 (all disabled)
+	0 0 1 (1 enabled)
+	0 1 0 (2 enabled)
+	1 0 0 (2 enabled)
+	0 1 1 (1,2 enabled)
+	1 1 0 (2,3 enabled)
+	1 0 1 (1,3 enabled)
+	1 1 1 (all enabled)

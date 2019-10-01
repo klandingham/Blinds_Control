@@ -1,0 +1,81 @@
+==============================================================================
+Development Notes for Automatic Window Blinds
+
+Version 0.2 - Based on Version 0.1, but going back to a stepper motor
+approach.
+
+==============================================================================
+
+
+==============================================================================
+STATUS: Have reconstructed basic circuit (with 74HC595 and one servo.) Using
+Shift_Register_RAW example circuit to drive it right now. Will base final
+sketch on this example. Needs to be modified to move motor faster. Also need
+to modify the sequence patterns to get stronger torque.
+==============================================================================
+==============================================================================
+NEXT TASK:
+
+The example code I am currently using uses explicit boolean patterns to drive
+the motor. This works, but it's clunky, error-prone and difficult to modify.
+I'm almost positive that in the latest code I was working on before the disk
+crash, I was using a technique to translate an integer value to a bit pattern
+then sending the result to the shift register. In fact, I remember that I was
+driving one stepper with the 4 low order bits and a second one with the high
+order bits. I need to find out how I did that (likely a built-in Arduino
+function) and resurrect it.
+
+I remember finding a very good YT video (by a guy at Microsoft) describing
+how stepper motors work, and in particular showing the different driving
+patterns that can be used and their characteristics. I need to find that
+video again. Perhaps I saved it as a favorite in a browser.
+
+Create working sketch based on example mentioned above. Modify rotation speed
+and cycle patterns.
+==============================================================================
+
+Since I'm back to using steppers, I will need to save the total number of
+steps required for open/close. (NOTE: will I need to store a separate count
+for each motor? Shouldn't have to, since all the motors are identical, but
+time will tell.)
+
+Current operation design:
+	3 pushbuttons:
+		1 - servo selection
+		2 - close button
+		3 - open button
+
+Open/close buttons will operate on timeout:
+	close button pushed:
+		wait 1 second
+		if close button still pushed
+			move in close direction until close button released (calibrate closed)
+		else
+			move in close direction for saved number of steps
+	open button pushed:
+		wait 1 second
+		if open button still pushed
+			set open-step-counter to 0
+			move in open direction until open button released, counting steps
+			on release save step counter value
+		else
+			move in open direction for saved number of steps
+
+
+==============================================================================
+TODO:
+Need to measure current drawn by stepper under load. Will need the enabling
+transistors to handle at least this much current.
+
+TODO: Need to come up with code that will allow enabling of servos using
+repetitive presses of a single selection button. Will need to step through
+each combination, something like:
+
+	0 0 0 (all disabled)
+	0 0 1 (1 enabled)
+	0 1 0 (2 enabled)
+	1 0 0 (2 enabled)
+	0 1 1 (1,2 enabled)
+	1 1 0 (2,3 enabled)
+	1 0 1 (1,3 enabled)
+	1 1 1 (all enabled)
