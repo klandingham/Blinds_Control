@@ -1,8 +1,18 @@
-6/20/2019
+______________________________________________________________________________
+GIT REPOS
+All projects now on github.
 
-This directory on M: is now a git repo. The following clones have been created:
+The old (obsolete) git workspaces are under:
 
-    laddie:/e/Automatic_Blinds (local git repo)/Blinds_Control
-    ginger:/home/kip/Project/Blinds_Control
+    ~/Projects.repos.on.mycloud   DO NOT USE THESE, SAVED JIC
+
+The new (active) git workspaces are under:
+
+    ~/Projects.repos.on.github
    
-     
+______________________________________________________________________________
+BOARDS
+
+Remember when switching code via CodeSelect.h you must also edit
+platformio.ini and define the target board. See for example:
+     https://docs.platformio.org/en/latest/boards/espressif8266/nodemcuv2.html

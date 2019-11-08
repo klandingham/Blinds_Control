@@ -72,8 +72,9 @@ IRrecv irrecv(IRRecvPin);
 decode_results results;
 unsigned long IRvalue;
 // unsigned long lastIRvalue;
-unsigned long IRCmdClose = 0x2FD807F;
-unsigned long IRCmdOpen = 0x2FD40BF;
+unsigned long IRCmdClose = 0x2FD807F;     // remote button 1
+unsigned long IRCmdOpen = 0x2FD40BF;      // remote button 2
+unsigned long IRCmdCalibrate = 0x2FDC03F; // remote button 3
 
 //////////////////////////////////////////////////////////////////////////////
 // If in the middle of a motor sequence and command becomes stop, we could be

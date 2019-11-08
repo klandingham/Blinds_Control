@@ -3,24 +3,40 @@
   Blinds_Control (NodeMCU version)
 
   Controls 28BYJ-48 stepper motors via shift registers to
-  open/close window blinds.
+  open/close window blinds. See history.txt
 
-  See history.txt
+  NOTE: For NodeMCU (and other boards) pin mapping, see:
+
+    https://github.com/esp8266/Arduino/blob/master/doc/boards.rst#pin-mapping
 
 */
 #include "CodeSelect.h"
 #ifdef NODE_MCU
 
 #include <Arduino.h>
+#include <IRremoteESP8266.h>
+#include <IRrecv.h>
+#include <IRutils.h>
 
 // pin assignments
-const int latchPin = D2;  // pin 12 on the 75HC595
-const int clockPin = D5;  // pin 11 on the 75HC595
-const int dataPin  = D7;  // pin 14 on the 75HC595
+const int latchPin = D2;  // to pin 12 on the 75HC595
+const int clockPin = D5;  // to pin 11 on the 75HC595
+const int dataPin  = D7;  // to pin 14 on the 75HC595
 const int calibrateLEDPin = D1;
 const int closeButton = D8;
 const int openButton  = D6;
 const int calibrateButton = D0;
+// const int IRpin = D3;
+
+// An IR detector/demodulator is connected to GPIO pin 0(D3 on a NodeMCU board).
+const uint16_t kRecvPin = 0;
+IRrecv irrecv(kRecvPin);
+decode_results results;
+unsigned long IRvalue;
+// unsigned long lastIRvalue;
+unsigned long IRCmdClose = 0x2FD807F;     // remote button 1
+unsigned long IRCmdOpen = 0x2FD40BF;      // remote button 2
+unsigned long IRCmdCalibrate = 0x2FDC03F; // remote button 3
 
 // Motor drive modes
 enum CommandState {
@@ -93,6 +109,10 @@ void setup() {
 
   Serial.begin(9600);
 
+  irrecv.enableIRIn();  // Start the IR receiver
+  while (!Serial)  // Wait for the serial connection to be established.
+    delay(50);
+
   pinMode(closeButton, INPUT_PULLUP);
   pinMode(openButton, INPUT);
   pinMode(calibrateButton, INPUT);
@@ -122,6 +142,17 @@ int lastOpenButtonState = 0;
 
 //////////////////////////////////////////////////////////////////////////////
 void loop() {
+
+  // first thing, check for IR command
+  IRvalue = 0;
+  if (irrecv.decode(&results)) {
+    IRvalue = results.value;
+    // print() & println() can't handle printing long longs. (uint64_t)
+    // serialPrintUint64(results.value, HEX);
+    // Serial.println("");
+    irrecv.resume();  // Receive the next value
+  }
+
   static int autoStartTime; // the time at which an auto-open/close op begins
 
   //
@@ -249,6 +280,42 @@ void loop() {
     } // end if button just changed state
   } // end else not calibrating
   lastOpenButtonState = openButtonState;
+  //
+  //
+  // Check for IR command. Most of the logic here follows that for the mechanical buttons.
+  //
+  // Note: if a calibration is in progress and the IRvalue is zero, that means
+  // that the remote Open button has been released
+  if ((calibrationInProgress) && (IRvalue == 0)) {
+    autoOpTime = millis() - calibrationStartTime;
+    command = STOP;
+    calibrationInProgress = false;
+    calibrating = false;
+  }
+  if (IRvalue != 0) { // if IR command received
+    // first check for calibrate command
+    // calibrate command is a *toggle*
+    if (IRvalue == IRCmdCalibrate) {
+      calibrating = !calibrating;
+    }
+    else if (IRvalue == IRCmdOpen) {
+      // note: if any remote button is pressed and held, the button code will be
+      // received only ONCE, followed bya series of FFFF... values until the button is
+      // released.
+      if (calibrating) { // if we are in calibration mode
+        if (!calibrationInProgress) { // if this is a new calibration
+          calibrationInProgress = true;
+          calibrationStartTime = millis();
+        }
+        command = OPEN;
+      }
+      else { // else, not calibrating
+        if (command != AUTO_CLOSE) {
+          command = AUTO_OPEN;
+        }
+      }
+    }
+  } // if IR command received
 
 
 
