@@ -53,6 +53,7 @@ int autoTimeInterval; // this is the measured time to move from opened to closed
 int autoStartTime;    // time at which a manual OPEN is started - used to measure required auto interval
 
 bool calibrating = false;
+bool IRcommandReceived = false;
 unsigned calibrateFlashTime;
 bool calibrateLEDOn = false;
 unsigned lastLoopTime = 0;
@@ -148,8 +149,8 @@ void loop() {
   if (irrecv.decode(&results)) {
     IRvalue = results.value;
     // print() & println() can't handle printing long longs. (uint64_t)
-    // serialPrintUint64(results.value, HEX);
-    // Serial.println("");
+    serialPrintUint64(results.value, HEX);
+    Serial.println("");
     irrecv.resume();  // Receive the next value
   }
 
@@ -286,21 +287,38 @@ void loop() {
   //
   // Note: if a calibration is in progress and the IRvalue is zero, that means
   // that the remote Open button has been released
+  //
+  // KIP: TODO The following block of code doesn't work - if you initiate calibration
+  // via button, this immediately shuts it off. I might need to remember if calibration
+  // was initiated via IR vs button.
+  //
+  /**
+   * TODO: May not need this block at all. Operation should be: press and release IR calibrate,
+   * go into calibration mode. Press and release again: exit calibration mode.
+   */
+  /*
   if ((calibrationInProgress) && (IRvalue == 0)) {
     autoOpTime = millis() - calibrationStartTime;
     command = STOP;
     calibrationInProgress = false;
     calibrating = false;
   }
+  */
+  
   if (IRvalue != 0) { // if IR command received
+    IRcommandReceived = true;
     // first check for calibrate command
     // calibrate command is a *toggle*
     if (IRvalue == IRCmdCalibrate) {
+      /**
+       * TODO: may not need this variable at all // IRcalibrating = !IRcalibrating;
+       */
       calibrating = !calibrating;
     }
     else if (IRvalue == IRCmdOpen) {
+      Serial.println("IR open button pressed"); // DEBUG
       // note: if any remote button is pressed and held, the button code will be
-      // received only ONCE, followed bya series of FFFF... values until the button is
+      // received only ONCE, followed by a series of FFFF... values until the button is
       // released.
       if (calibrating) { // if we are in calibration mode
         if (!calibrationInProgress) { // if this is a new calibration
@@ -310,12 +328,57 @@ void loop() {
         command = OPEN;
       }
       else { // else, not calibrating
-        if (command != AUTO_CLOSE) {
+        if (command != AUTO_CLOSE) { // do not interrupt an AUTO_CLOSE in progress
           command = AUTO_OPEN;
+          Serial.println("command set to AUTO_OPEN");
         }
       }
     }
+    else if (IRvalue == IRCmdClose) {
+      if (command != AUTO_OPEN) { // do not interrupt an AUTO_OPEN in progress
+        command = AUTO_CLOSE;
+      }
+    }
+    /**
+     * Here, there is a nonzero IRvalue, but it isn't any of the known IR commands.
+     * It is either the FFF... sequence (button being held down), or some other remote
+     * button we don't care about. In any case, we don't care about what the value is,
+     * we care about what state we're currently in.
+     *  Here's the logic:
+     *    if the last initial press was the open button (i.e. command is OPEN)
+     *      if we're calibrating
+     *        keep opening (leave command at OPEN)
+     *      if we're not calibrating (command will be AUTO_OPEN)
+     *        change command to OPEN (keep opening)
+     *    if the last initial press was the close button
+     *      if we've initiated an auto close
+     *        change command to CLOSE (keep closing)
+     */
+    else {
+      Serial.print("else at 358, command = "); // DEBUG
+      Serial.println(command);
+      if (command == AUTO_OPEN)
+        command = OPEN;
+      else if (command == AUTO_CLOSE)
+        command = CLOSE;
+    }
   } // if IR command received
+  /**
+   * TODO: add another clause here: no button is pressed. If we've been manually
+   * opening or closing, we need to stop. if
+   * Here, IRvalue IS zero. If we've been calibrating (IR open button held down),
+   * we have to end the calibration.
+   */
+  if (IRcommandReceived) {
+    IRcommandReceived = false;
+    if (calibrationInProgress) { // if currently measuring
+      autoOpTime = millis() - calibrationStartTime;
+      calibrationInProgress = false;
+      calibrating = false;
+    }
+    command = STOP;
+  }
+
 
 
 
@@ -370,9 +433,9 @@ void loop() {
   else if (command == CLOSE) {
     SendNextSequence(false);
   }
-  // Note: had a delay in here because the steppers were skipping. Increased the
-  // stepper power voltage from 5 to 12V. No delay is necessary now (the stepper
-  // motors can keep up with the code.)
+  // Note: If stepper driver lights come on, but motor does not turn, try adding
+  // a delay here.
+  delay(3);
 } // loop()
 
 #endif
