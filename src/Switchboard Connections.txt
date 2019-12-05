@@ -1,0 +1,9 @@
+Switchboard Connections
+
+ GND - T10
++12V - A11
+  D1 - V13 (CAL LED)
++3V3 - U03
+  D8 - C08 (CLOSE button)
+  D6 - K08 (OPEN button)
+  D0 - S08 (CAL button)
