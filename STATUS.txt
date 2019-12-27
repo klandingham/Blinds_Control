@@ -1,5 +1,14 @@
 NOTE: add timestamps with :r!date
 =================================================================
+Fri Dec 27 00:31:17 EST 2019
+- - - - -
+I've decided to stick with the NodeMCU for this project, even
+though I likely will not use the WiFi functionality. I have added
+an IR sensor to the circuit to enable control using an old TV
+remote that I have. The Fritzing diagrams need to be updated to
+reflect this.
+
+=================================================================
 Sun Aug 18 16:23:57 EDT 2019
 - - - - -
 Fixed bug with logic - timing-related variables were rolling over
