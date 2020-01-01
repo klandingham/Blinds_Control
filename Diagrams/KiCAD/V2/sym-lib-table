@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Kip_Custom_Lib)(type Legacy)(uri /home/kip/kicad/libraries/kicad-kip/kip.lib)(options "")(descr ""))
+)

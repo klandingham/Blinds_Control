@@ -1,0 +1,126 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "Blinds Control Schematic"
+Date "2020-01-01"
+Rev "V2"
+Comp ""
+Comment1 "uses NodeMCU"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ESP8266:NodeMCU_1.0_(ESP-12E) U?
+U 1 1 5E0E21D9
+P 4700 2950
+F 0 "U?" H 4700 1863 60  0000 C CNN
+F 1 "NodeMCU_1.0_(ESP-12E)" H 4700 1969 60  0000 C CNN
+F 2 "" H 4100 2100 60  0000 C CNN
+F 3 "" H 4100 2100 60  0000 C CNN
+	1    4700 2950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 5E0E50A9
+P 2500 3050
+F 0 "SW?" H 2500 3335 50  0000 C CNN
+F 1 "SW_Push" H 2500 3244 50  0000 C CNN
+F 2 "" H 2500 3250 50  0001 C CNN
+F 3 "~" H 2500 3250 50  0001 C CNN
+	1    2500 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 5E0E5472
+P 2500 3300
+F 0 "SW?" H 2500 3585 50  0000 C CNN
+F 1 "SW_Push" H 2500 3494 50  0000 C CNN
+F 2 "" H 2500 3500 50  0001 C CNN
+F 3 "~" H 2500 3500 50  0001 C CNN
+	1    2500 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 5E0E5680
+P 2500 3600
+F 0 "SW?" H 2500 3885 50  0000 C CNN
+F 1 "SW_Push" H 2500 3794 50  0000 C CNN
+F 2 "" H 2500 3800 50  0001 C CNN
+F 3 "~" H 2500 3800 50  0001 C CNN
+	1    2500 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Kip_Custom_Lib:JBtekPowerReg PR?
+U 1 1 5E0E6805
+P 2850 1800
+F 0 "PR?" H 2633 1915 50  0000 C CNN
+F 1 "JBtekPowerReg" H 2633 1824 50  0000 C CNN
+F 2 "" H 2850 1800 50  0001 C CNN
+F 3 "" H 2850 1800 50  0001 C CNN
+	1    2850 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Kip_Custom_Lib:TSOP38238 U?
+U 1 1 5E0E6BC9
+P 6400 2200
+F 0 "U?" H 6458 2797 60  0000 C CNN
+F 1 "TSOP38238" H 6458 2691 60  0000 C CNN
+F 2 "" H 6400 2200 50  0001 C CNN
+F 3 "" H 6400 2200 50  0001 C CNN
+	1    6400 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC595 U?
+U 1 1 5E0E7473
+P 7400 3300
+F 0 "U?" H 7400 4081 50  0000 C CNN
+F 1 "74HC595" H 7400 3990 50  0000 C CNN
+F 2 "" H 7400 3300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 7400 3300 50  0001 C CNN
+	1    7400 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC595 U?
+U 1 1 5E0E792D
+P 6450 3550
+F 0 "U?" H 6450 4331 50  0000 C CNN
+F 1 "74HC595" H 6450 4240 50  0000 C CNN
+F 2 "" H 6450 3550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 6450 3550 50  0001 C CNN
+	1    6450 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5E0E8304
+P 7450 1900
+F 0 "D?" H 7443 2116 50  0000 C CNN
+F 1 "LED" H 7443 2025 50  0000 C CNN
+F 2 "" H 7450 1900 50  0001 C CNN
+F 3 "~" H 7450 1900 50  0001 C CNN
+	1    7450 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E0E87FE
+P 3350 1800
+F 0 "R?" H 3420 1846 50  0000 L CNN
+F 1 "R" H 3420 1755 50  0000 L CNN
+F 2 "" V 3280 1800 50  0001 C CNN
+F 3 "~" H 3350 1800 50  0001 C CNN
+	1    3350 1800
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
