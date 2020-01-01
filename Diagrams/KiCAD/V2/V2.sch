@@ -14,113 +14,473 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L ESP8266:NodeMCU_1.0_(ESP-12E) U?
+L ESP8266:NodeMCU_1.0_(ESP-12E) U2
 U 1 1 5E0E21D9
-P 4700 2950
-F 0 "U?" H 4700 1863 60  0000 C CNN
-F 1 "NodeMCU_1.0_(ESP-12E)" H 4700 1969 60  0000 C CNN
-F 2 "" H 4100 2100 60  0000 C CNN
-F 3 "" H 4100 2100 60  0000 C CNN
-	1    4700 2950
+P 5000 2950
+F 0 "U2" H 5000 1863 60  0000 C CNN
+F 1 "NodeMCU_1.0_(ESP-12E)" H 5000 1969 60  0000 C CNN
+F 2 "" H 4400 2100 60  0000 C CNN
+F 3 "" H 4400 2100 60  0000 C CNN
+	1    5000 2950
 	-1   0    0    1   
 $EndComp
 $Comp
-L Switch:SW_Push SW?
+L Switch:SW_Push SW1
 U 1 1 5E0E50A9
-P 2500 3050
-F 0 "SW?" H 2500 3335 50  0000 C CNN
-F 1 "SW_Push" H 2500 3244 50  0000 C CNN
-F 2 "" H 2500 3250 50  0001 C CNN
-F 3 "~" H 2500 3250 50  0001 C CNN
-	1    2500 3050
+P 2600 2450
+F 0 "SW1" H 2600 2735 50  0000 C CNN
+F 1 "CLOSE" H 2600 2644 50  0000 C CNN
+F 2 "" H 2600 2650 50  0001 C CNN
+F 3 "~" H 2600 2650 50  0001 C CNN
+	1    2600 2450
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_Push SW?
+L Switch:SW_Push SW2
 U 1 1 5E0E5472
-P 2500 3300
-F 0 "SW?" H 2500 3585 50  0000 C CNN
-F 1 "SW_Push" H 2500 3494 50  0000 C CNN
-F 2 "" H 2500 3500 50  0001 C CNN
-F 3 "~" H 2500 3500 50  0001 C CNN
-	1    2500 3300
+P 2600 2950
+F 0 "SW2" H 2600 3235 50  0000 C CNN
+F 1 "OPEN" H 2600 3144 50  0000 C CNN
+F 2 "" H 2600 3150 50  0001 C CNN
+F 3 "~" H 2600 3150 50  0001 C CNN
+	1    2600 2950
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_Push SW?
+L Switch:SW_Push SW3
 U 1 1 5E0E5680
-P 2500 3600
-F 0 "SW?" H 2500 3885 50  0000 C CNN
-F 1 "SW_Push" H 2500 3794 50  0000 C CNN
-F 2 "" H 2500 3800 50  0001 C CNN
-F 3 "~" H 2500 3800 50  0001 C CNN
-	1    2500 3600
+P 2600 3450
+F 0 "SW3" H 2600 3735 50  0000 C CNN
+F 1 "CAL" H 2600 3644 50  0000 C CNN
+F 2 "" H 2600 3650 50  0001 C CNN
+F 3 "~" H 2600 3650 50  0001 C CNN
+	1    2600 3450
 	1    0    0    -1  
 $EndComp
 $Comp
-L Kip_Custom_Lib:JBtekPowerReg PR?
-U 1 1 5E0E6805
-P 2850 1800
-F 0 "PR?" H 2633 1915 50  0000 C CNN
-F 1 "JBtekPowerReg" H 2633 1824 50  0000 C CNN
-F 2 "" H 2850 1800 50  0001 C CNN
-F 3 "" H 2850 1800 50  0001 C CNN
-	1    2850 1800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Kip_Custom_Lib:TSOP38238 U?
+L Kip_Custom_Lib:TSOP38238 U1
 U 1 1 5E0E6BC9
-P 6400 2200
-F 0 "U?" H 6458 2797 60  0000 C CNN
-F 1 "TSOP38238" H 6458 2691 60  0000 C CNN
-F 2 "" H 6400 2200 50  0001 C CNN
-F 3 "" H 6400 2200 50  0001 C CNN
-	1    6400 2200
-	1    0    0    -1  
+P 1850 4050
+F 0 "U1" H 1908 4647 60  0000 C CNN
+F 1 "TSOP38238" H 1908 4541 60  0000 C CNN
+F 2 "" H 1850 4050 50  0001 C CNN
+F 3 "" H 1850 4050 50  0001 C CNN
+	1    1850 4050
+	1    0    0    1   
 $EndComp
 $Comp
-L 74xx:74HC595 U?
+L 74xx:74HC595 U4
 U 1 1 5E0E7473
-P 7400 3300
-F 0 "U?" H 7400 4081 50  0000 C CNN
-F 1 "74HC595" H 7400 3990 50  0000 C CNN
-F 2 "" H 7400 3300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 7400 3300 50  0001 C CNN
-	1    7400 3300
+P 7250 3700
+F 0 "U4" H 7250 4481 50  0000 C CNN
+F 1 "74HC595" H 7250 4390 50  0000 C CNN
+F 2 "" H 7250 3700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 7250 3700 50  0001 C CNN
+	1    7250 3700
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74HC595 U?
+L 74xx:74HC595 U3
 U 1 1 5E0E792D
-P 6450 3550
-F 0 "U?" H 6450 4331 50  0000 C CNN
-F 1 "74HC595" H 6450 4240 50  0000 C CNN
-F 2 "" H 6450 3550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 6450 3550 50  0001 C CNN
-	1    6450 3550
+P 7250 2000
+F 0 "U3" H 7250 2781 50  0000 C CNN
+F 1 "74HC595" H 7250 2690 50  0000 C CNN
+F 2 "" H 7250 2000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 7250 2000 50  0001 C CNN
+	1    7250 2000
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:LED D?
+L Device:LED D1
 U 1 1 5E0E8304
-P 7450 1900
-F 0 "D?" H 7443 2116 50  0000 C CNN
-F 1 "LED" H 7443 2025 50  0000 C CNN
-F 2 "" H 7450 1900 50  0001 C CNN
-F 3 "~" H 7450 1900 50  0001 C CNN
-	1    7450 1900
+P 4200 4000
+F 0 "D1" V 4200 3850 50  0000 C CNN
+F 1 "CALIBRATING" V 3900 4000 50  0000 C CNN
+F 2 "" H 4200 4000 50  0001 C CNN
+F 3 "~" H 4200 4000 50  0001 C CNN
+	1    4200 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Kip_Custom_Lib:JBtekPowerReg PR1
+U 1 1 5E0D3CC2
+P 3300 1500
+F 0 "PR1" H 3083 1615 50  0000 C CNN
+F 1 "JBtekPowerReg" H 3083 1524 50  0000 C CNN
+F 2 "" H 3300 1500 50  0001 C CNN
+F 3 "" H 3300 1500 50  0001 C CNN
+	1    3300 1500
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
-U 1 1 5E0E87FE
-P 3350 1800
-F 0 "R?" H 3420 1846 50  0000 L CNN
-F 1 "R" H 3420 1755 50  0000 L CNN
-F 2 "" V 3280 1800 50  0001 C CNN
-F 3 "~" H 3350 1800 50  0001 C CNN
-	1    3350 1800
+L Motor:Stepper_Motor_bipolar M1
+U 1 1 5E0DF213
+P 9050 1900
+F 0 "M1" H 9238 2024 50  0000 L CNN
+F 1 "Stepper_Motor_bipolar" H 9238 1933 50  0000 L CNN
+F 2 "" H 9060 1890 50  0001 C CNN
+F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 9060 1890 50  0001 C CNN
+	1    9050 1900
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5E0E2039
+P 3300 4550
+F 0 "#PWR01" H 3300 4300 50  0001 C CNN
+F 1 "GND" H 3305 4377 50  0000 C CNN
+F 2 "" H 3300 4550 50  0001 C CNN
+F 3 "" H 3300 4550 50  0001 C CNN
+	1    3300 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 1950 3300 2100
+Wire Wire Line
+	4200 2350 3650 2350
+Wire Wire Line
+	3650 2350 3650 2100
+Wire Wire Line
+	3650 2100 3300 2100
+Connection ~ 3300 2100
+Wire Wire Line
+	3300 2100 3300 2650
+Wire Wire Line
+	3750 1800 3750 2250
+Wire Wire Line
+	4200 3050 3300 3050
+Connection ~ 3300 3050
+Wire Wire Line
+	3300 3050 3300 3650
+$Comp
+L Device:R R1
+U 1 1 5E0E87FE
+P 3600 2650
+F 0 "R1" V 3500 2600 50  0000 L CNN
+F 1 "10K" V 3600 2600 50  0000 L CNN
+F 2 "" V 3530 2650 50  0001 C CNN
+F 3 "~" H 3600 2650 50  0001 C CNN
+	1    3600 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5E0E9C84
+P 3600 2850
+F 0 "R2" V 3500 2800 50  0000 L CNN
+F 1 "10K" V 3600 2800 50  0000 L CNN
+F 2 "" V 3530 2850 50  0001 C CNN
+F 3 "~" H 3600 2850 50  0001 C CNN
+	1    3600 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5E0E9ECB
+P 3600 3650
+F 0 "R3" V 3500 3600 50  0000 L CNN
+F 1 "10K" V 3600 3600 50  0000 L CNN
+F 2 "" V 3530 3650 50  0001 C CNN
+F 3 "~" H 3600 3650 50  0001 C CNN
+	1    3600 3650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 2650 3800 2650
+Wire Wire Line
+	3450 2650 3300 2650
+Connection ~ 3300 2650
+Wire Wire Line
+	3300 2650 3300 2850
+Wire Wire Line
+	2800 2450 3800 2450
+Wire Wire Line
+	3800 2450 3800 2650
+Connection ~ 3800 2650
+Wire Wire Line
+	3800 2650 4200 2650
+Wire Wire Line
+	3750 2850 3800 2850
+Wire Wire Line
+	3450 2850 3300 2850
+Connection ~ 3300 2850
+Wire Wire Line
+	3300 2850 3300 3050
+Wire Wire Line
+	2800 2950 3800 2950
+Wire Wire Line
+	3800 2950 3800 2850
+Connection ~ 3800 2850
+Wire Wire Line
+	3800 2850 4200 2850
+Wire Wire Line
+	3450 3650 3300 3650
+Connection ~ 3300 3650
+Wire Wire Line
+	3300 3650 3300 4150
+Wire Wire Line
+	3750 3650 3800 3650
+Wire Wire Line
+	2800 3450 3800 3450
+Wire Wire Line
+	3800 3450 3800 3650
+Connection ~ 3800 3650
+Wire Wire Line
+	3800 3650 4200 3650
+Wire Wire Line
+	2400 2450 2400 2650
+Wire Wire Line
+	2400 3450 2400 2950
+Connection ~ 2400 2950
+Wire Wire Line
+	2000 2650 2400 2650
+Connection ~ 2400 2650
+Wire Wire Line
+	2400 2650 2400 2950
+Text Label 2150 2650 0    50   ~ 0
+3V3
+$Comp
+L Device:R R4
+U 1 1 5E0FFBC6
+P 3600 4150
+F 0 "R4" V 3500 4100 50  0000 L CNN
+F 1 "2K4" V 3600 4100 50  0000 L CNN
+F 2 "" V 3530 4150 50  0001 C CNN
+F 3 "~" H 3600 4150 50  0001 C CNN
+	1    3600 4150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4200 3550 4200 3650
+Wire Wire Line
+	3750 4150 4200 4150
+Wire Wire Line
+	3450 4150 3300 4150
+Connection ~ 3300 4150
+Wire Wire Line
+	3300 4150 3300 4400
+Wire Wire Line
+	2250 4400 3300 4400
+Connection ~ 3300 4400
+Wire Wire Line
+	3300 4400 3300 4550
+Wire Wire Line
+	2250 4050 2400 4050
+Wire Wire Line
+	2400 4050 2400 3450
+Connection ~ 2400 3450
+Wire Wire Line
+	2950 3700 2950 3350
+Wire Wire Line
+	2950 3350 4200 3350
+Wire Wire Line
+	2250 3700 2950 3700
+Wire Wire Line
+	7250 1400 6650 1400
+Wire Wire Line
+	6650 1400 6650 1900
+Wire Wire Line
+	6650 1900 6850 1900
+Wire Wire Line
+	7250 3100 6650 3100
+Wire Wire Line
+	6650 3100 6650 3600
+Wire Wire Line
+	6650 3600 6850 3600
+$Comp
+L Motor:Stepper_Motor_bipolar M2
+U 1 1 5E14D675
+P 9050 2850
+F 0 "M2" H 9238 2974 50  0000 L CNN
+F 1 "Stepper_Motor_bipolar" H 9238 2883 50  0000 L CNN
+F 2 "" H 9060 2840 50  0001 C CNN
+F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 9060 2840 50  0001 C CNN
+	1    9050 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor:Stepper_Motor_bipolar M3
+U 1 1 5E14DD56
+P 9050 3750
+F 0 "M3" H 9238 3874 50  0000 L CNN
+F 1 "Stepper_Motor_bipolar" H 9238 3783 50  0000 L CNN
+F 2 "" H 9060 3740 50  0001 C CNN
+F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 9060 3740 50  0001 C CNN
+	1    9050 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 1600 8950 1600
+Connection ~ 4200 3650
+Wire Wire Line
+	4200 3650 4200 3850
+Wire Wire Line
+	6850 1600 4100 1600
+Wire Wire Line
+	4100 1600 4100 2750
+Wire Wire Line
+	4100 2750 4200 2750
+Wire Wire Line
+	3300 1800 3750 1800
+Wire Wire Line
+	6650 1400 3750 1400
+Wire Wire Line
+	3750 1400 3750 1800
+Connection ~ 6650 1400
+Connection ~ 3750 1800
+Text Label 4350 1400 0    50   ~ 0
+3V3
+Wire Wire Line
+	6650 1900 6650 3100
+Connection ~ 6650 1900
+Connection ~ 6650 3100
+Wire Wire Line
+	5800 2750 6450 2750
+Wire Wire Line
+	7250 2750 7250 2700
+Wire Wire Line
+	6450 2750 6450 3900
+Wire Wire Line
+	6450 4400 7250 4400
+Connection ~ 6450 2750
+Wire Wire Line
+	6450 2750 7250 2750
+Wire Wire Line
+	6850 2200 6450 2200
+Wire Wire Line
+	6450 2200 6450 2750
+Wire Wire Line
+	6850 3900 6450 3900
+Connection ~ 6450 3900
+Wire Wire Line
+	6450 3900 6450 4400
+Wire Wire Line
+	4200 3450 4000 3450
+Wire Wire Line
+	4000 3450 4000 1750
+Wire Wire Line
+	4000 1750 6200 1750
+Wire Wire Line
+	6200 1750 6200 2100
+Wire Wire Line
+	6200 2100 6850 2100
+Wire Wire Line
+	6850 3800 6200 3800
+Wire Wire Line
+	6200 3800 6200 2100
+Connection ~ 6200 2100
+Wire Wire Line
+	4200 2950 3900 2950
+Wire Wire Line
+	3900 2950 3900 1500
+Wire Wire Line
+	3900 1500 6350 1500
+Wire Wire Line
+	6450 1500 6450 1800
+Wire Wire Line
+	6450 1800 6850 1800
+Wire Wire Line
+	7650 2500 7650 2800
+Wire Wire Line
+	7650 2800 6550 2800
+Wire Wire Line
+	6550 2800 6550 3300
+Wire Wire Line
+	6550 3300 6850 3300
+Wire Wire Line
+	7650 1700 8650 1700
+Wire Wire Line
+	8650 1500 9150 1500
+Wire Wire Line
+	9150 1500 9150 1600
+Wire Wire Line
+	8650 1500 8650 1700
+Wire Wire Line
+	7650 1800 8750 1800
+Wire Wire Line
+	7650 1900 8750 1900
+Wire Wire Line
+	8750 1900 8750 2000
+Wire Wire Line
+	7650 2000 8650 2000
+Wire Wire Line
+	8650 2000 8650 2150
+Wire Wire Line
+	8650 2150 8950 2150
+Wire Wire Line
+	8950 2150 8950 2550
+Wire Wire Line
+	7650 2100 8550 2100
+Wire Wire Line
+	8550 2100 8550 2250
+Wire Wire Line
+	8550 2250 9150 2250
+Wire Wire Line
+	9150 2250 9150 2550
+Wire Wire Line
+	7650 2200 8450 2200
+Wire Wire Line
+	8450 2200 8450 2750
+Wire Wire Line
+	8450 2750 8750 2750
+Wire Wire Line
+	7650 2300 8350 2300
+Wire Wire Line
+	8350 2300 8350 2950
+Wire Wire Line
+	8350 2950 8750 2950
+Wire Wire Line
+	6850 3500 6350 3500
+Wire Wire Line
+	6350 3500 6350 1500
+Connection ~ 6350 1500
+Wire Wire Line
+	6350 1500 6450 1500
+Wire Wire Line
+	7650 3300 8950 3300
+Wire Wire Line
+	8950 3300 8950 3450
+Wire Wire Line
+	7650 3400 9150 3400
+Wire Wire Line
+	9150 3400 9150 3450
+Wire Wire Line
+	7650 3500 8750 3500
+Wire Wire Line
+	8750 3500 8750 3650
+Wire Wire Line
+	7650 3600 8650 3600
+Wire Wire Line
+	8650 3600 8650 3850
+Wire Wire Line
+	8650 3850 8750 3850
+NoConn ~ 4200 2450
+NoConn ~ 4200 2550
+NoConn ~ 4200 3250
+NoConn ~ 5800 3650
+NoConn ~ 5800 3550
+NoConn ~ 5800 3450
+NoConn ~ 5800 3350
+NoConn ~ 5800 3250
+NoConn ~ 5800 3150
+NoConn ~ 5800 3050
+NoConn ~ 5800 2950
+NoConn ~ 5800 2850
+NoConn ~ 5800 2250
+Wire Wire Line
+	3750 2250 4200 2250
+NoConn ~ 4200 3150
+NoConn ~ 5800 2350
+NoConn ~ 5800 2450
+NoConn ~ 5800 2550
+NoConn ~ 5800 2650
+NoConn ~ 3300 1650
+Wire Wire Line
+	2750 1650 2000 1650
+Text Label 2350 1650 0    50   ~ 0
+12V
+NoConn ~ 7650 3700
+NoConn ~ 7650 3800
+NoConn ~ 7650 3900
+NoConn ~ 7650 4000
 $EndSCHEMATC
