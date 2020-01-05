@@ -1,12 +1,12 @@
 Switchboard Pad IDs
 
-  Circuit Point     Pad ID(s)     Cable Color
-  =============     =========     ===========
-  GND               G09, T10      Black
-  +12V              J11           Red
-  SW Common         U03           Brown
-  Close SW          C08           Green
-  Open SW           K08           Yellow
-  Cal SW            S08           Orange
-  Cal LED Drive     V12           White
+  Circuit Point     Pad ID(s)     Cable Color    Connector Pin
+  =============     =========     ===========    =============
+  Open SW           K08           Yellow               1
+  Cal SW            S08           Orange               2
+  Close SW          C08           Green                3
+  +12V              J11           Red                  4
+  3V3               U03           Brown                6
+  Cal LED Drive     V12           White                5
+  GND               G09, T10      Black                7
 
