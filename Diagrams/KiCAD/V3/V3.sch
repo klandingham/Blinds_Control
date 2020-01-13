@@ -642,133 +642,122 @@ Connection ~ 2400 3350
 $Comp
 L Motor:Stepper_Motor_bipolar M?
 U 1 1 5E1E386D
-P 9550 2300
-F 0 "M?" H 9750 2350 50  0000 L CNN
-F 1 "Window 1" H 9750 2250 50  0000 L CNN
-F 2 "" H 9560 2290 50  0001 C CNN
-F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 9560 2290 50  0001 C CNN
-	1    9550 2300
+P 9850 2300
+F 0 "M?" H 10050 2350 50  0000 L CNN
+F 1 "Window 1" H 10050 2250 50  0000 L CNN
+F 2 "" H 9860 2290 50  0001 C CNN
+F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 9860 2290 50  0001 C CNN
+	1    9850 2300
 	1    0    0    -1  
 $EndComp
 $Comp
 L ProjectCustom:SBT0811 U?
 U 1 1 5E1E7C3C
-P 8950 1600
-F 0 "U?" H 8925 2165 50  0000 C CNN
-F 1 "SBT0811" H 8925 2074 50  0000 C CNN
-F 2 "" H 8950 1700 50  0001 C CNN
-F 3 "" H 8950 1700 50  0001 C CNN
-	1    8950 1600
+P 9250 1600
+F 0 "U?" H 9225 2165 50  0000 C CNN
+F 1 "SBT0811" H 9225 2074 50  0000 C CNN
+F 2 "" H 9250 1700 50  0001 C CNN
+F 3 "" H 9250 1700 50  0001 C CNN
+	1    9250 1600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9150 2100 9150 2200
+	9450 2100 9450 2200
 Wire Wire Line
-	9150 2200 9250 2200
+	9450 2200 9550 2200
 $Comp
 L ProjectCustom:SBT0811 U?
 U 1 1 5E22FDCE
-P 8950 3100
-F 0 "U?" H 8925 3665 50  0000 C CNN
-F 1 "SBT0811" H 8925 3574 50  0000 C CNN
-F 2 "" H 8950 3200 50  0001 C CNN
-F 3 "" H 8950 3200 50  0001 C CNN
-	1    8950 3100
+P 9250 3150
+F 0 "U?" H 9225 3715 50  0000 C CNN
+F 1 "SBT0811" H 9225 3624 50  0000 C CNN
+F 2 "" H 9250 3250 50  0001 C CNN
+F 3 "" H 9250 3250 50  0001 C CNN
+	1    9250 3150
 	1    0    0    -1  
 $EndComp
 $Comp
 L Motor:Stepper_Motor_bipolar M?
 U 1 1 5E23B025
-P 9550 3850
-F 0 "M?" H 9750 3900 50  0000 L CNN
-F 1 "Window 2" H 9750 3800 50  0000 L CNN
-F 2 "" H 9560 3840 50  0001 C CNN
-F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 9560 3840 50  0001 C CNN
-	1    9550 3850
+P 9850 3900
+F 0 "M?" H 10050 3950 50  0000 L CNN
+F 1 "Window 2" H 10050 3850 50  0000 L CNN
+F 2 "" H 9860 3890 50  0001 C CNN
+F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 9860 3890 50  0001 C CNN
+	1    9850 3900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9350 3250 9450 3250
+	9650 3300 9750 3300
 Wire Wire Line
-	9450 3250 9450 3550
+	9750 3300 9750 3600
 Wire Wire Line
-	9150 3600 9150 3750
+	9450 3650 9450 3800
 Wire Wire Line
-	9150 3750 9250 3750
+	9450 3800 9550 3800
 $Comp
 L ProjectCustom:SBT0811 U?
 U 1 1 5E2BC2AB
-P 8950 4700
-F 0 "U?" H 8925 5265 50  0000 C CNN
-F 1 "SBT0811" H 8925 5174 50  0000 C CNN
-F 2 "" H 8950 4800 50  0001 C CNN
-F 3 "" H 8950 4800 50  0001 C CNN
-	1    8950 4700
+P 9250 4800
+F 0 "U?" H 9225 5365 50  0000 C CNN
+F 1 "SBT0811" H 9225 5274 50  0000 C CNN
+F 2 "" H 9250 4900 50  0001 C CNN
+F 3 "" H 9250 4900 50  0001 C CNN
+	1    9250 4800
 	1    0    0    -1  
 $EndComp
 $Comp
 L Motor:Stepper_Motor_bipolar M?
 U 1 1 5E2BC7BC
-P 9550 5450
-F 0 "M?" H 9750 5500 50  0000 L CNN
-F 1 "Window 3" H 9750 5400 50  0000 L CNN
-F 2 "" H 9560 5440 50  0001 C CNN
-F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 9560 5440 50  0001 C CNN
-	1    9550 5450
+P 9850 5550
+F 0 "M?" H 10050 5600 50  0000 L CNN
+F 1 "Window 3" H 10050 5500 50  0000 L CNN
+F 2 "" H 9860 5540 50  0001 C CNN
+F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 9860 5540 50  0001 C CNN
+	1    9850 5550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9350 1850 9450 1850
+	9650 1850 9750 1850
 Wire Wire Line
-	9450 1850 9450 2000
+	9750 1850 9750 2000
 Wire Wire Line
-	9350 1750 9650 1750
+	9650 1750 9950 1750
 Wire Wire Line
-	9650 1750 9650 2000
+	9950 1750 9950 2000
 Wire Wire Line
-	9250 2400 9050 2400
+	9550 2400 9350 2400
 Wire Wire Line
-	9050 2400 9050 2100
+	9350 2400 9350 2100
 Wire Wire Line
-	9350 3350 9650 3350
+	9650 3400 9950 3400
 Wire Wire Line
-	9650 3350 9650 3550
+	9950 3400 9950 3600
 Wire Wire Line
-	9250 3950 9050 3950
+	9550 4000 9350 4000
 Wire Wire Line
-	9050 3950 9050 3600
+	9350 4000 9350 3650
 Wire Wire Line
-	9350 4850 9650 4850
+	9650 4950 9950 4950
 Wire Wire Line
-	9650 4850 9650 5150
+	9950 4950 9950 5250
 Wire Wire Line
-	9350 4950 9450 4950
+	9650 5050 9750 5050
 Wire Wire Line
-	9450 4950 9450 5150
+	9750 5050 9750 5250
 Wire Wire Line
-	9150 5200 9150 5350
+	9450 5300 9450 5450
 Wire Wire Line
-	9150 5350 9250 5350
+	9450 5450 9550 5450
 Wire Wire Line
-	9050 5200 9050 5550
+	9350 5300 9350 5650
 Wire Wire Line
-	9050 5550 9250 5550
-$Comp
-L Connector:Conn_01x04_Male P?
-U 1 1 5E312279
-P 8100 3100
-F 0 "P?" H 8250 3350 50  0000 C CNN
-F 1 " " H 8208 3290 50  0000 C CNN
-F 2 "" H 8100 3100 50  0001 C CNN
-F 3 "~" H 8100 3100 50  0001 C CNN
-	1    8100 3100
-	1    0    0    -1  
-$EndComp
+	9350 5650 9550 5650
 $Comp
 L Connector:Conn_01x04_Female J?
 U 1 1 5E312BCF
 P 8050 1700
-F 0 "J?" H 7950 1400 50  0000 L CNN
+F 0 "J?" H 8000 1900 50  0000 L CNN
 F 1 " " H 8078 1585 50  0000 L CNN
 F 2 "" H 8050 1700 50  0001 C CNN
 F 3 "~" H 8050 1700 50  0001 C CNN
@@ -776,109 +765,32 @@ F 3 "~" H 8050 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x04_Female J?
-U 1 1 5E314473
-P 6900 850
-F 0 "J?" H 6928 826 50  0000 L CNN
-F 1 "Conn_01x04_Female" H 6928 735 50  0000 L CNN
-F 2 "" H 6900 850 50  0001 C CNN
-F 3 "~" H 6900 850 50  0001 C CNN
-	1    6900 850 
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x04_Female J?
-U 1 1 5E3147B1
-P 6250 800
-F 0 "J?" H 6278 776 50  0000 L CNN
-F 1 "Conn_01x04_Female" H 6278 685 50  0000 L CNN
-F 2 "" H 6250 800 50  0001 C CNN
-F 3 "~" H 6250 800 50  0001 C CNN
-	1    6250 800 
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:Conn_01x02_Male P?
 U 1 1 5E35213B
-P 8150 1300
-F 0 "P?" H 8300 1450 50  0000 C CNN
-F 1 " " H 8258 1390 50  0000 C CNN
-F 2 "" H 8150 1300 50  0001 C CNN
-F 3 "~" H 8150 1300 50  0001 C CNN
-	1    8150 1300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x02_Male J?
-U 1 1 5E35254D
-P 10100 1050
-F 0 "J?" H 10208 1231 50  0000 C CNN
-F 1 "Conn_01x02_Male" H 10208 1140 50  0000 C CNN
-F 2 "" H 10100 1050 50  0001 C CNN
-F 3 "~" H 10100 1050 50  0001 C CNN
-	1    10100 1050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x02_Male J?
-U 1 1 5E35286D
-P 10100 1500
-F 0 "J?" H 10208 1681 50  0000 C CNN
-F 1 "Conn_01x02_Male" H 10208 1590 50  0000 C CNN
-F 2 "" H 10100 1500 50  0001 C CNN
-F 3 "~" H 10100 1500 50  0001 C CNN
-	1    10100 1500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x02_Female J?
-U 1 1 5E352F75
-P 9550 1050
-F 0 "J?" H 9578 1026 50  0000 L CNN
-F 1 "Conn_01x02_Female" H 9578 935 50  0000 L CNN
-F 2 "" H 9550 1050 50  0001 C CNN
-F 3 "~" H 9550 1050 50  0001 C CNN
-	1    9550 1050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x02_Female J?
-U 1 1 5E3533DD
-P 9200 750
-F 0 "J?" H 9228 726 50  0000 L CNN
-F 1 "Conn_01x02_Female" H 9228 635 50  0000 L CNN
-F 2 "" H 9200 750 50  0001 C CNN
-F 3 "~" H 9200 750 50  0001 C CNN
-	1    9200 750 
+P 8150 1200
+F 0 "P?" H 8200 1300 50  0000 C CNN
+F 1 " " H 8258 1290 50  0000 C CNN
+F 2 "" H 8150 1200 50  0001 C CNN
+F 3 "~" H 8150 1200 50  0001 C CNN
+	1    8150 1200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:Conn_01x02_Female J?
 U 1 1 5E35378E
-P 8050 1300
-F 0 "J?" H 8000 1450 50  0000 L CNN
-F 1 " " H 8078 1185 50  0000 L CNN
-F 2 "" H 8050 1300 50  0001 C CNN
-F 3 "~" H 8050 1300 50  0001 C CNN
-	1    8050 1300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x04_Male P?
-U 1 1 5E35E2F6
-P 7850 3400
-F 0 "P?" H 8000 3650 50  0000 C CNN
-F 1 " " H 7958 3590 50  0000 C CNN
-F 2 "" H 7850 3400 50  0001 C CNN
-F 3 "~" H 7850 3400 50  0001 C CNN
-	1    7850 3400
+P 8050 1200
+F 0 "J?" H 8000 1300 50  0000 L CNN
+F 1 " " H 8078 1085 50  0000 L CNN
+F 2 "" H 8050 1200 50  0001 C CNN
+F 3 "~" H 8050 1200 50  0001 C CNN
+	1    8050 1200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:Conn_01x04_Male P?
 U 1 1 5E35E72A
 P 8150 1700
-F 0 "P?" H 8300 1400 50  0000 C CNN
+F 0 "P?" H 8200 1900 50  0000 C CNN
 F 1 " " H 8258 1890 50  0000 C CNN
 F 2 "" H 8150 1700 50  0001 C CNN
 F 3 "~" H 8150 1700 50  0001 C CNN
@@ -886,13 +798,13 @@ F 3 "~" H 8150 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8350 1600 8500 1600
+	8350 1600 8800 1600
 Wire Wire Line
-	8350 1700 8500 1700
+	8350 1700 8800 1700
 Wire Wire Line
-	8350 1800 8500 1800
+	8350 1800 8800 1800
 Wire Wire Line
-	8350 1900 8500 1900
+	8350 1900 8800 1900
 Wire Wire Line
 	7650 1600 7850 1600
 Wire Wire Line
@@ -901,4 +813,242 @@ Wire Wire Line
 	7650 1800 7850 1800
 Wire Wire Line
 	7650 1900 7850 1900
+Text Label 8400 1600 0    50   ~ 0
+BR
+Text Label 8400 1700 0    50   ~ 0
+TA
+Text Label 8400 1800 0    50   ~ 0
+OR
+Text Label 8400 1900 0    50   ~ 0
+WH
+$Comp
+L Connector:Conn_01x04_Female J?
+U 1 1 5E1FF055
+P 8050 2100
+F 0 "J?" H 8000 1800 50  0000 L CNN
+F 1 " " H 8078 1985 50  0000 L CNN
+F 2 "" H 8050 2100 50  0001 C CNN
+F 3 "~" H 8050 2100 50  0001 C CNN
+	1    8050 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male P?
+U 1 1 5E200D23
+P 8150 2100
+F 0 "P?" H 8200 1800 50  0000 C CNN
+F 1 " " H 8258 2290 50  0000 C CNN
+F 2 "" H 8150 2100 50  0001 C CNN
+F 3 "~" H 8150 2100 50  0001 C CNN
+	1    8150 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 2000 7850 2000
+Wire Wire Line
+	7650 2100 7850 2100
+Wire Wire Line
+	7650 2200 7850 2200
+Wire Wire Line
+	7650 2300 7850 2300
+Wire Wire Line
+	7600 1200 7850 1200
+Text Label 7650 1200 0    50   ~ 0
+12V
+Wire Wire Line
+	7600 1300 7850 1300
+Text Label 7650 1300 0    50   ~ 0
+GND
+Wire Wire Line
+	8350 1300 8800 1300
+Wire Wire Line
+	8350 1200 8500 1200
+Wire Wire Line
+	8500 1200 8500 1400
+Wire Wire Line
+	8500 1400 8800 1400
+Text Label 8600 1300 0    50   ~ 0
+GN
+Text Label 8600 1400 0    50   ~ 0
+BE
+Wire Wire Line
+	8350 2000 8700 2000
+Wire Wire Line
+	8700 2000 8700 3150
+Wire Wire Line
+	8700 3150 8800 3150
+Wire Wire Line
+	8350 2100 8600 2100
+Wire Wire Line
+	8600 2100 8600 3250
+Wire Wire Line
+	8600 3250 8800 3250
+Wire Wire Line
+	8350 2200 8500 2200
+Wire Wire Line
+	8500 2200 8500 3350
+Wire Wire Line
+	8500 3350 8800 3350
+Wire Wire Line
+	8350 2300 8400 2300
+Wire Wire Line
+	8400 2300 8400 3450
+Wire Wire Line
+	8400 3450 8800 3450
+$Comp
+L Connector:Conn_01x02_Male P?
+U 1 1 5E2E3A43
+P 8000 2950
+F 0 "P?" H 8050 3050 50  0000 C CNN
+F 1 " " H 8108 3040 50  0000 C CNN
+F 2 "" H 8000 2950 50  0001 C CNN
+F 3 "~" H 8000 2950 50  0001 C CNN
+	1    8000 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 2850 8800 2850
+$Comp
+L Connector:Conn_01x02_Female J?
+U 1 1 5E307EF0
+P 7950 2950
+F 0 "J?" H 7900 3050 50  0000 L CNN
+F 1 " " H 7978 2835 50  0000 L CNN
+F 2 "" H 7950 2950 50  0001 C CNN
+F 3 "~" H 7950 2950 50  0001 C CNN
+	1    7950 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 2850 8350 3050
+Wire Wire Line
+	8350 3050 8200 3050
+Wire Wire Line
+	8200 2950 8800 2950
+Text Label 8200 2950 0    50   ~ 0
+BE
+Text Label 8200 3050 0    50   ~ 0
+GN
+Wire Wire Line
+	7550 2950 7750 2950
+Wire Wire Line
+	7550 3050 7750 3050
+Text Label 7600 2950 0    50   ~ 0
+12V
+Text Label 7600 3050 0    50   ~ 0
+GND
+Text Label 8700 2300 1    50   ~ 0
+BR
+Text Label 8600 2400 1    50   ~ 0
+TA
+Text Label 8500 2500 1    50   ~ 0
+OR
+Text Label 8400 2600 1    50   ~ 0
+WH
+$Comp
+L Connector:Conn_01x04_Female J?
+U 1 1 5E391F1F
+P 8200 4900
+F 0 "J?" H 8100 5100 50  0000 L CNN
+F 1 " " H 8228 4785 50  0000 L CNN
+F 2 "" H 8200 4900 50  0001 C CNN
+F 3 "~" H 8200 4900 50  0001 C CNN
+	1    8200 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 4800 8800 4800
+Wire Wire Line
+	8450 4900 8800 4900
+Wire Wire Line
+	8450 5000 8800 5000
+Wire Wire Line
+	8450 5100 8800 5100
+Wire Wire Line
+	7650 3600 7700 3600
+Wire Wire Line
+	7700 3600 7700 5100
+Wire Wire Line
+	7700 5100 8000 5100
+Wire Wire Line
+	7650 3500 7750 3500
+Wire Wire Line
+	7750 3500 7750 5000
+Wire Wire Line
+	7750 5000 8000 5000
+Wire Wire Line
+	7650 3400 7800 3400
+Wire Wire Line
+	7800 3400 7800 4900
+Wire Wire Line
+	7800 4900 8000 4900
+Wire Wire Line
+	7650 3300 7850 3300
+Wire Wire Line
+	7850 3300 7850 4800
+Wire Wire Line
+	7850 4800 8000 4800
+$Comp
+L Connector:Conn_01x02_Female J?
+U 1 1 5E40AA06
+P 8200 4500
+F 0 "J?" H 8100 4600 50  0000 L CNN
+F 1 " " H 8228 4385 50  0000 L CNN
+F 2 "" H 8200 4500 50  0001 C CNN
+F 3 "~" H 8200 4500 50  0001 C CNN
+	1    8200 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male P?
+U 1 1 5E40B3CA
+P 8250 4500
+F 0 "P?" H 8300 4600 50  0000 C CNN
+F 1 " " H 8358 4590 50  0000 C CNN
+F 2 "" H 8250 4500 50  0001 C CNN
+F 3 "~" H 8250 4500 50  0001 C CNN
+	1    8250 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 4500 8800 4500
+Wire Wire Line
+	8450 4600 8800 4600
+Text Label 8550 4500 0    50   ~ 0
+GN
+Text Label 8550 4600 0    50   ~ 0
+BE
+$Comp
+L Connector:Conn_01x04_Male P?
+U 1 1 5E39493B
+P 8250 4900
+F 0 "P?" H 8300 5100 50  0000 C CNN
+F 1 " " H 8358 5090 50  0000 C CNN
+F 2 "" H 8250 4900 50  0001 C CNN
+F 3 "~" H 8250 4900 50  0001 C CNN
+	1    8250 4900
+	1    0    0    -1  
+$EndComp
+Text Label 8550 4800 0    50   ~ 0
+BN
+Text Label 8550 4900 0    50   ~ 0
+TA
+Text Label 8550 5000 0    50   ~ 0
+OR
+Text Label 8550 5100 0    50   ~ 0
+WH
+Wire Wire Line
+	8350 3950 7900 3950
+Wire Wire Line
+	7900 3950 7900 4600
+Wire Wire Line
+	7900 4600 8000 4600
+Wire Wire Line
+	8350 4050 8000 4050
+Wire Wire Line
+	8000 4050 8000 4500
+Text Label 8150 3950 0    50   ~ 0
+12V
+Text Label 8150 4050 0    50   ~ 0
+GND
 $EndSCHEMATC

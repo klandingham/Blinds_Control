@@ -643,8 +643,8 @@ $Comp
 L Motor:Stepper_Motor_bipolar M?
 U 1 1 5E1E386D
 P 9550 2300
-F 0 "M?" H 9738 2424 50  0000 L CNN
-F 1 "Stepper_Motor_bipolar" H 9738 2333 50  0000 L CNN
+F 0 "M?" H 9750 2350 50  0000 L CNN
+F 1 "Window 1" H 9750 2250 50  0000 L CNN
 F 2 "" H 9560 2290 50  0001 C CNN
 F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 9560 2290 50  0001 C CNN
 	1    9550 2300
@@ -680,8 +680,8 @@ $Comp
 L Motor:Stepper_Motor_bipolar M?
 U 1 1 5E23B025
 P 9550 3850
-F 0 "M?" H 9738 3974 50  0000 L CNN
-F 1 "Stepper_Motor_bipolar" H 9738 3883 50  0000 L CNN
+F 0 "M?" H 9750 3900 50  0000 L CNN
+F 1 "Window 2" H 9750 3800 50  0000 L CNN
 F 2 "" H 9560 3840 50  0001 C CNN
 F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 9560 3840 50  0001 C CNN
 	1    9550 3850
@@ -710,8 +710,8 @@ $Comp
 L Motor:Stepper_Motor_bipolar M?
 U 1 1 5E2BC7BC
 P 9550 5450
-F 0 "M?" H 9738 5574 50  0000 L CNN
-F 1 "Stepper_Motor_bipolar" H 9738 5483 50  0000 L CNN
+F 0 "M?" H 9750 5500 50  0000 L CNN
+F 1 "Window 3" H 9750 5400 50  0000 L CNN
 F 2 "" H 9560 5440 50  0001 C CNN
 F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 9560 5440 50  0001 C CNN
 	1    9550 5450
@@ -753,4 +753,152 @@ Wire Wire Line
 	9050 5200 9050 5550
 Wire Wire Line
 	9050 5550 9250 5550
+$Comp
+L Connector:Conn_01x04_Male P?
+U 1 1 5E312279
+P 8100 3100
+F 0 "P?" H 8250 3350 50  0000 C CNN
+F 1 " " H 8208 3290 50  0000 C CNN
+F 2 "" H 8100 3100 50  0001 C CNN
+F 3 "~" H 8100 3100 50  0001 C CNN
+	1    8100 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Female J?
+U 1 1 5E312BCF
+P 8050 1700
+F 0 "J?" H 7950 1400 50  0000 L CNN
+F 1 " " H 8078 1585 50  0000 L CNN
+F 2 "" H 8050 1700 50  0001 C CNN
+F 3 "~" H 8050 1700 50  0001 C CNN
+	1    8050 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Female J?
+U 1 1 5E314473
+P 6900 850
+F 0 "J?" H 6928 826 50  0000 L CNN
+F 1 "Conn_01x04_Female" H 6928 735 50  0000 L CNN
+F 2 "" H 6900 850 50  0001 C CNN
+F 3 "~" H 6900 850 50  0001 C CNN
+	1    6900 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Female J?
+U 1 1 5E3147B1
+P 6250 800
+F 0 "J?" H 6278 776 50  0000 L CNN
+F 1 "Conn_01x04_Female" H 6278 685 50  0000 L CNN
+F 2 "" H 6250 800 50  0001 C CNN
+F 3 "~" H 6250 800 50  0001 C CNN
+	1    6250 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male P?
+U 1 1 5E35213B
+P 8150 1300
+F 0 "P?" H 8300 1450 50  0000 C CNN
+F 1 " " H 8258 1390 50  0000 C CNN
+F 2 "" H 8150 1300 50  0001 C CNN
+F 3 "~" H 8150 1300 50  0001 C CNN
+	1    8150 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J?
+U 1 1 5E35254D
+P 10100 1050
+F 0 "J?" H 10208 1231 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 10208 1140 50  0000 C CNN
+F 2 "" H 10100 1050 50  0001 C CNN
+F 3 "~" H 10100 1050 50  0001 C CNN
+	1    10100 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J?
+U 1 1 5E35286D
+P 10100 1500
+F 0 "J?" H 10208 1681 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 10208 1590 50  0000 C CNN
+F 2 "" H 10100 1500 50  0001 C CNN
+F 3 "~" H 10100 1500 50  0001 C CNN
+	1    10100 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J?
+U 1 1 5E352F75
+P 9550 1050
+F 0 "J?" H 9578 1026 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 9578 935 50  0000 L CNN
+F 2 "" H 9550 1050 50  0001 C CNN
+F 3 "~" H 9550 1050 50  0001 C CNN
+	1    9550 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J?
+U 1 1 5E3533DD
+P 9200 750
+F 0 "J?" H 9228 726 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 9228 635 50  0000 L CNN
+F 2 "" H 9200 750 50  0001 C CNN
+F 3 "~" H 9200 750 50  0001 C CNN
+	1    9200 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J?
+U 1 1 5E35378E
+P 8050 1300
+F 0 "J?" H 8000 1450 50  0000 L CNN
+F 1 " " H 8078 1185 50  0000 L CNN
+F 2 "" H 8050 1300 50  0001 C CNN
+F 3 "~" H 8050 1300 50  0001 C CNN
+	1    8050 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male P?
+U 1 1 5E35E2F6
+P 7850 3400
+F 0 "P?" H 8000 3650 50  0000 C CNN
+F 1 " " H 7958 3590 50  0000 C CNN
+F 2 "" H 7850 3400 50  0001 C CNN
+F 3 "~" H 7850 3400 50  0001 C CNN
+	1    7850 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male P?
+U 1 1 5E35E72A
+P 8150 1700
+F 0 "P?" H 8300 1400 50  0000 C CNN
+F 1 " " H 8258 1890 50  0000 C CNN
+F 2 "" H 8150 1700 50  0001 C CNN
+F 3 "~" H 8150 1700 50  0001 C CNN
+	1    8150 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 1600 8500 1600
+Wire Wire Line
+	8350 1700 8500 1700
+Wire Wire Line
+	8350 1800 8500 1800
+Wire Wire Line
+	8350 1900 8500 1900
+Wire Wire Line
+	7650 1600 7850 1600
+Wire Wire Line
+	7650 1700 7850 1700
+Wire Wire Line
+	7650 1800 7850 1800
+Wire Wire Line
+	7650 1900 7850 1900
 $EndSCHEMATC
