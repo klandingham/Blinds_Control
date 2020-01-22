@@ -1,0 +1,10 @@
+TODO.txt
+
+Pull-up resistors need to be added to board.
+
+The sockets for the shift register ICs are the wrong size!
+They are 14-pin sockets. The ICs are 16-pin. Current sockets
+need to be removed and replaced with 16-pin types. After
+replacement, the PCB pin IDs will need to be updated in the
+schematic.
+

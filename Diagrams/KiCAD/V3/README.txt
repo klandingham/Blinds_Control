@@ -1,2 +1,8 @@
-This is version 3 of the KiCAD schematic. It is a clone
-of V2, with connectors added to the schematic.
+See TODO.txt
+
+Tue Jan 21 23:30:34 EST 2020
+--------------------------------------
+V3 of schematic completed. Started additional version with
+PCB pin IDs added.
+
+
