@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name Kip_Custom_Lib)(type Legacy)(uri /home/kip/kicad/libraries/kicad-kip/kip.lib)(options "")(descr ""))
+  (lib (name ProjectCustom)(type Legacy)(uri /home/kip/Projects/Blinds_Control/Diagrams/KiCAD/V3/ProjectCustom.lib)(options "")(descr ""))
+)
