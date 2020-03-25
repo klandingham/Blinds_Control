@@ -1,0 +1,10 @@
+
+Go through the code - whereever possble, replace int and unsigned types with
+uint8_t (unsigned 8-bit integer, min=0, max=255). These are smaller than int
+and unsigned and will save memory space.
+
+Right now the code uses polling to detect button presses. A better way is to
+use hardware interrupts (see Youtube for tutorials). But, AFAIK, the standard
+Arduino UNO only supports 2 hardware interrupts, and I have three buttons. I
+suppose there's a chance that the WAVGAT clone might support more interrupts
+...I'll need to try to research that.

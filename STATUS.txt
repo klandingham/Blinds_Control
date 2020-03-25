@@ -1,5 +1,11 @@
 NOTE: add timestamps with :r!date
 =================================================================
+Sat Mar 21 12:17:30 EDT 2020
+- - - - -
+Now working on wiring main circuit board. Use "working" KiCAD
+file to mark completed connections with "d".
+
+=================================================================
 Fri Dec 27 00:31:17 EST 2019
 - - - - -
 I've decided to stick with the NodeMCU for this project, even
