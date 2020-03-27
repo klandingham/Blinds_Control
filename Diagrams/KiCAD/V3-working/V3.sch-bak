@@ -165,8 +165,6 @@ Wire Wire Line
 Connection ~ 6650 1900
 Connection ~ 6650 3100
 Wire Wire Line
-	7250 2750 7250 2700
-Wire Wire Line
 	4200 3450 4000 3450
 Wire Wire Line
 	4000 3450 4000 1750
@@ -420,7 +418,7 @@ Connection ~ 3650 6150
 Wire Wire Line
 	3650 5250 3650 5700
 Connection ~ 3650 5700
-Text Label 1000 6000 1    50   ~ 0
+Text Label 1000 6220 1    50   ~ 0
 +12V
 $Comp
 L Transistor_BJT:2N3904 Q?
@@ -959,8 +957,6 @@ Wire Wire Line
 	7900 4600 8000 4600
 Wire Wire Line
 	8350 4050 8000 4050
-Wire Wire Line
-	8000 4050 8000 4500
 Text Label 8150 3950 0    50   ~ 0
 12V
 Text Label 8150 4050 0    50   ~ 0
@@ -969,14 +965,179 @@ Wire Wire Line
 	5805 2750 6025 2750
 Text Label 5845 2750 0    50   ~ 0
 GND
-Text Label 3795 3045 0    50   ~ 0
+Text Label 3790 3050 0    50   ~ 0
 GND
-Text Label 3720 2355 0    50   ~ 0
+Text Label 3725 2350 0    50   ~ 0
 GND
 Wire Wire Line
-	3300 2100 3300 3050
+	3300 2100 3300 2650
 Wire Wire Line
-	3300 3250 3300 4400
-Text Notes 1060 1000 0    157  ~ 0
-Delete wires as they\nare completed.
+	3300 3250 3300 3650
+Text Label 1860 2950 0    50   ~ 0
+YE
+Text Label 1860 3050 0    50   ~ 0
+GN
+Text Label 1860 3150 0    50   ~ 0
+WH
+Text Label 1860 3250 0    50   ~ 0
+BK
+Text Label 1200 3050 1    50   ~ 0
+OR
+Text Label 1350 2880 1    50   ~ 0
+RE
+Text Label 1350 3315 1    50   ~ 0
+BN
+Text Label 1800 5385 1    50   ~ 0
+YE
+Wire Wire Line
+	4200 2650 3800 2650
+Connection ~ 3800 2650
+Text Label 3915 2650 0    118  ~ 0
+.
+Wire Wire Line
+	4200 2850 3800 2850
+Connection ~ 3800 2850
+Wire Wire Line
+	4200 3650 3800 3650
+Connection ~ 3800 3650
+Wire Wire Line
+	8000 4050 8000 4500
+Wire Wire Line
+	7865 4800 7865 3300
+Wire Wire Line
+	7650 3300 7865 3300
+Wire Wire Line
+	7865 4800 8000 4800
+Wire Wire Line
+	7650 3400 7825 3400
+Wire Wire Line
+	7825 3400 7825 4900
+Wire Wire Line
+	7825 4900 8000 4900
+Wire Wire Line
+	7650 3500 7785 3500
+Wire Wire Line
+	7785 3500 7785 5000
+Wire Wire Line
+	7785 5000 8000 5000
+Wire Wire Line
+	7650 3600 7745 3600
+Wire Wire Line
+	7745 3600 7745 5100
+Wire Wire Line
+	7745 5100 8000 5100
+Text Label 3915 2850 0    118  ~ 0
+.
+Text Label 3920 3650 0    118  ~ 0
+.
+Text Label 7655 3300 0    118  ~ 0
+.
+Text Label 7655 3400 0    118  ~ 0
+.
+Text Label 7655 3500 0    118  ~ 0
+.
+Text Label 7655 3600 0    118  ~ 0
+.
+Text Label 7905 4800 0    118  ~ 0
+.
+Text Label 7905 4900 0    118  ~ 0
+.
+Text Label 7905 5000 0    118  ~ 0
+.
+Text Label 7905 5100 0    118  ~ 0
+.
+Wire Wire Line
+	7650 1600 7850 1600
+Wire Wire Line
+	7650 1700 7850 1700
+Wire Wire Line
+	7650 1800 7850 1800
+Wire Wire Line
+	7650 1900 7850 1900
+Wire Wire Line
+	7650 2000 7850 2000
+Wire Wire Line
+	7650 2100 7850 2100
+Wire Wire Line
+	7650 2200 7850 2200
+Wire Wire Line
+	7650 2300 7850 2300
+Text Label 7720 1600 0    118  ~ 0
+.
+Text Label 7720 1700 0    118  ~ 0
+.
+Text Label 7720 1800 0    118  ~ 0
+.
+Text Label 7720 1900 0    118  ~ 0
+.
+Text Label 7720 2000 0    118  ~ 0
+.
+Text Label 7720 2100 0    118  ~ 0
+.
+Text Label 7720 2200 0    118  ~ 0
+.
+Text Label 7720 2300 0    118  ~ 0
+.
+Wire Wire Line
+	3450 2650 3300 2650
+Connection ~ 3300 2650
+Wire Wire Line
+	3300 2650 3300 2850
+Wire Wire Line
+	3450 2850 3300 2850
+Connection ~ 3300 2850
+Wire Wire Line
+	3300 2850 3300 3050
+Text Label 3365 2650 0    118  ~ 0
+.
+Text Label 3365 2850 0    118  ~ 0
+.
+Wire Wire Line
+	3450 3650 3300 3650
+Connection ~ 3300 3650
+Wire Wire Line
+	3300 3650 3300 4400
+Text Label 3355 3650 0    118  ~ 0
+.
+Wire Wire Line
+	7250 4400 6460 4400
+Connection ~ 3900 4400
+Text Label 7055 4400 0    118  ~ 0
+.
+Wire Wire Line
+	6850 2200 6460 2200
+Wire Wire Line
+	6460 2200 6460 2700
+Connection ~ 6460 4400
+Wire Wire Line
+	6460 4400 3900 4400
+Text Label 6740 2200 0    118  ~ 0
+.
+Wire Wire Line
+	7250 2700 6460 2700
+Connection ~ 6460 2700
+Wire Wire Line
+	6460 2700 6460 3900
+Text Label 7085 2700 0    118  ~ 0
+.
+Wire Wire Line
+	6850 3900 6460 3900
+Connection ~ 6460 3900
+Wire Wire Line
+	6460 3900 6460 4400
+Text Label 6765 3900 0    118  ~ 0
+.
+Text Label 1800 5600 0    50   ~ 0
+GN
+Text Label 1900 5870 1    50   ~ 0
+WH
+Text Label 1700 5945 1    50   ~ 0
+BK
+Text Label 1100 5500 0    50   ~ 0
+OR
+Text Label 1000 5825 1    50   ~ 0
+RE
+Text Label 1200 5820 3    50   ~ 0
+BR
+NoConn ~ 7650 4200
 $EndSCHEMATC
