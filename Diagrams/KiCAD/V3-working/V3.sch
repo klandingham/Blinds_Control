@@ -234,10 +234,10 @@ NoConn ~ 7650 3800
 NoConn ~ 7650 3900
 NoConn ~ 7650 4000
 $Comp
-L Switch:SW_Push SW?
+L Switch:SW_Push SW2
 U 1 1 5E130019
 P 2450 5600
-F 0 "SW?" H 2450 5885 50  0000 C CNN
+F 0 "SW2" H 2450 5885 50  0000 C CNN
 F 1 "CLOSE" H 2450 5794 50  0000 C CNN
 F 2 "" H 2450 5800 50  0001 C CNN
 F 3 "~" H 2450 5800 50  0001 C CNN
@@ -245,10 +245,10 @@ F 3 "~" H 2450 5800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_Push SW?
+L Switch:SW_Push SW1
 U 1 1 5E139219
 P 2450 5150
-F 0 "SW?" H 2450 5435 50  0000 C CNN
+F 0 "SW1" H 2450 5435 50  0000 C CNN
 F 1 "OPEN" H 2450 5344 50  0000 C CNN
 F 2 "" H 2450 5350 50  0001 C CNN
 F 3 "~" H 2450 5350 50  0001 C CNN
@@ -256,10 +256,10 @@ F 3 "~" H 2450 5350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_Push SW?
+L Switch:SW_Push SW3
 U 1 1 5E139B73
 P 2450 6050
-F 0 "SW?" H 2450 6335 50  0000 C CNN
+F 0 "SW3" H 2450 6335 50  0000 C CNN
 F 1 "CAL" H 2450 6244 50  0000 C CNN
 F 2 "" H 2450 6250 50  0001 C CNN
 F 3 "~" H 2450 6250 50  0001 C CNN
@@ -293,10 +293,10 @@ Wire Wire Line
 Wire Wire Line
 	1100 5500 1200 5500
 $Comp
-L Device:LED D?
+L Device:LED D1
 U 1 1 5E16A5E8
 P 3000 5100
-F 0 "D?" V 2900 4850 50  0000 C CNN
+F 0 "D1" V 2900 4850 50  0000 C CNN
 F 1 "GREEN" V 3000 4850 50  0000 C CNN
 F 2 "" H 3000 5100 50  0001 C CNN
 F 3 "~" H 3000 5100 50  0001 C CNN
@@ -310,10 +310,10 @@ Wire Wire Line
 Wire Wire Line
 	2750 4950 2750 5400
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0101
 U 1 1 5E18CBF4
 P 2150 7000
-F 0 "#PWR?" H 2150 6750 50  0001 C CNN
+F 0 "#PWR0101" H 2150 6750 50  0001 C CNN
 F 1 "GND" H 2155 6827 50  0000 C CNN
 F 2 "" H 2150 7000 50  0001 C CNN
 F 3 "" H 2150 7000 50  0001 C CNN
@@ -325,10 +325,10 @@ Wire Wire Line
 Wire Wire Line
 	2150 7000 2150 6900
 $Comp
-L Device:R R?
+L Device:R R6
 U 1 1 5E1927BF
 P 3500 5700
-F 0 "R?" V 3400 5650 50  0000 L CNN
+F 0 "R6" V 3400 5650 50  0000 L CNN
 F 1 "200K" V 3500 5600 50  0000 L CNN
 F 2 "" V 3430 5700 50  0001 C CNN
 F 3 "~" H 3500 5700 50  0001 C CNN
@@ -339,10 +339,10 @@ Wire Wire Line
 	2150 6900 2500 6900
 Connection ~ 2150 6900
 $Comp
-L Device:LED D?
+L Device:LED D2
 U 1 1 5E1BBD85
 P 3000 5550
-F 0 "D?" V 2900 5300 50  0000 C CNN
+F 0 "D2" V 2900 5300 50  0000 C CNN
 F 1 "RED" V 3000 5300 50  0000 C CNN
 F 2 "" H 3000 5550 50  0001 C CNN
 F 3 "~" H 3000 5550 50  0001 C CNN
@@ -350,10 +350,10 @@ F 3 "~" H 3000 5550 50  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L Device:LED D?
+L Device:LED D3
 U 1 1 5E1BC2BF
 P 3000 6000
-F 0 "D?" V 2900 5750 50  0000 C CNN
+F 0 "D3" V 2900 5750 50  0000 C CNN
 F 1 "BLUE" V 3000 5750 50  0000 C CNN
 F 2 "" H 3000 6000 50  0001 C CNN
 F 3 "~" H 3000 6000 50  0001 C CNN
@@ -366,10 +366,10 @@ Connection ~ 2750 5400
 Wire Wire Line
 	2750 5400 2750 6900
 $Comp
-L Device:R R?
+L Device:R R5
 U 1 1 5E1DD847
 P 3500 5250
-F 0 "R?" V 3400 5200 50  0000 L CNN
+F 0 "R5" V 3400 5200 50  0000 L CNN
 F 1 "4K3" V 3500 5150 50  0000 L CNN
 F 2 "" V 3430 5250 50  0001 C CNN
 F 3 "~" H 3500 5250 50  0001 C CNN
@@ -377,10 +377,10 @@ F 3 "~" H 3500 5250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R7
 U 1 1 5E1DE06A
 P 3500 6150
-F 0 "R?" V 3400 6100 50  0000 L CNN
+F 0 "R7" V 3400 6100 50  0000 L CNN
 F 1 "100K" V 3500 6050 50  0000 L CNN
 F 2 "" V 3430 6150 50  0001 C CNN
 F 3 "~" H 3500 6150 50  0001 C CNN
@@ -410,10 +410,10 @@ Connection ~ 3650 5700
 Text Label 1000 6220 1    50   ~ 0
 +12V
 $Comp
-L Transistor_BJT:2N3904 Q?
+L Transistor_BJT:2N3904 Q1
 U 1 1 5E201517
 P 2400 6600
-F 0 "Q?" H 2250 6700 50  0000 L CNN
+F 0 "Q1" H 2250 6700 50  0000 L CNN
 F 1 "2N3904" H 2100 6450 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2600 6525 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 2400 6600 50  0001 L CNN
@@ -432,10 +432,10 @@ Connection ~ 2500 6900
 Wire Wire Line
 	2500 6900 2750 6900
 $Comp
-L Device:R R?
+L Device:R R4
 U 1 1 5E26FDB3
 P 2050 6600
-F 0 "R?" V 1950 6550 50  0000 L CNN
+F 0 "R4" V 1950 6550 50  0000 L CNN
 F 1 "200K" V 2050 6500 50  0000 L CNN
 F 2 "" V 1980 6600 50  0001 C CNN
 F 3 "~" H 2050 6600 50  0001 C CNN
@@ -447,10 +447,10 @@ Wire Wire Line
 Wire Wire Line
 	1900 5700 1700 5700
 $Comp
-L Connector_Generic:Conn_2Rows-07Pins J?
+L Connector_Generic:Conn_2Rows-07Pins J1
 U 1 1 5E27D590
 P 1650 3050
-F 0 "J?" H 1700 3250 50  0000 C CNN
+F 0 "J1" H 1700 3250 50  0000 C CNN
 F 1 " " H 1700 3276 50  0000 C CNN
 F 2 "" H 1650 3050 50  0001 C CNN
 F 3 "~" H 1650 3050 50  0001 C CNN
@@ -509,10 +509,10 @@ Connection ~ 3300 3250
 Text Label 1350 2550 1    50   ~ 0
 12V
 $Comp
-L Kip_Custom_Lib:TSOP38238 U?
+L Kip_Custom_Lib:TSOP38238 U1
 U 1 1 5E3181D9
 P 5500 5750
-F 0 "U?" H 5558 6347 60  0000 C CNN
+F 0 "U1" H 5558 6347 60  0000 C CNN
 F 1 "TSOP38238" H 5558 6241 60  0000 C CNN
 F 2 "" H 5500 5750 50  0001 C CNN
 F 3 "" H 5500 5750 50  0001 C CNN
@@ -520,10 +520,10 @@ F 3 "" H 5500 5750 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector:Conn_01x03_Male P?
+L Connector:Conn_01x03_Male P2
 U 1 1 5E331E30
 P 4600 5750
-F 0 "P?" H 4700 6000 50  0000 C CNN
+F 0 "P2" H 4700 6000 50  0000 C CNN
 F 1 " " H 4708 5940 50  0000 C CNN
 F 2 "" H 4600 5750 50  0001 C CNN
 F 3 "~" H 4600 5750 50  0001 C CNN
@@ -531,10 +531,10 @@ F 3 "~" H 4600 5750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x03_Female J?
+L Connector:Conn_01x03_Female J2
 U 1 1 5E1688B2
 P 4500 5750
-F 0 "J?" H 4350 6000 50  0000 L CNN
+F 0 "J2" H 4350 6000 50  0000 L CNN
 F 1 " " H 4528 5685 50  0000 L CNN
 F 2 "" H 4500 5750 50  0001 C CNN
 F 3 "~" H 4500 5750 50  0001 C CNN
@@ -542,49 +542,13 @@ F 3 "~" H 4500 5750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4800 5650 5000 5650
-Wire Wire Line
-	5000 5650 5000 5750
-Wire Wire Line
-	5000 5750 5100 5750
-Wire Wire Line
-	4800 5750 4950 5750
-Wire Wire Line
-	4950 5750 4950 5400
-Wire Wire Line
-	4950 5400 5100 5400
-Wire Wire Line
-	4800 5850 5000 5850
-Wire Wire Line
-	5000 5850 5000 6100
-Wire Wire Line
-	5000 6100 5100 6100
-Wire Wire Line
-	4200 3350 4100 3350
-Wire Wire Line
-	4100 3350 4100 5750
-Wire Wire Line
-	4100 5750 4300 5750
-Wire Wire Line
-	4300 5650 4000 5650
-Wire Wire Line
-	4000 5650 4000 4050
-Wire Wire Line
-	4300 5850 3900 5850
-Wire Wire Line
-	3900 5850 3900 4400
-Wire Wire Line
-	3900 4400 3300 4400
-Wire Wire Line
-	4000 4050 2400 4050
-Wire Wire Line
 	2400 4050 2400 3350
 Connection ~ 2400 3350
 $Comp
-L Motor:Stepper_Motor_bipolar M?
+L Motor:Stepper_Motor_bipolar M1
 U 1 1 5E1E386D
 P 9850 2300
-F 0 "M?" H 10050 2350 50  0000 L CNN
+F 0 "M1" H 10050 2350 50  0000 L CNN
 F 1 "Window 1" H 10050 2250 50  0000 L CNN
 F 2 "" H 9860 2290 50  0001 C CNN
 F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 9860 2290 50  0001 C CNN
@@ -592,10 +556,10 @@ F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarSte
 	1    0    0    -1  
 $EndComp
 $Comp
-L ProjectCustom:SBT0811 U?
+L ProjectCustom:SBT0811 U5
 U 1 1 5E1E7C3C
 P 9250 1600
-F 0 "U?" H 9225 2165 50  0000 C CNN
+F 0 "U5" H 9225 2165 50  0000 C CNN
 F 1 "SBT0811" H 9225 2074 50  0000 C CNN
 F 2 "" H 9250 1700 50  0001 C CNN
 F 3 "" H 9250 1700 50  0001 C CNN
@@ -607,10 +571,10 @@ Wire Wire Line
 Wire Wire Line
 	9450 2200 9550 2200
 $Comp
-L ProjectCustom:SBT0811 U?
+L ProjectCustom:SBT0811 U6
 U 1 1 5E22FDCE
 P 9250 3150
-F 0 "U?" H 9225 3715 50  0000 C CNN
+F 0 "U6" H 9225 3715 50  0000 C CNN
 F 1 "SBT0811" H 9225 3624 50  0000 C CNN
 F 2 "" H 9250 3250 50  0001 C CNN
 F 3 "" H 9250 3250 50  0001 C CNN
@@ -618,10 +582,10 @@ F 3 "" H 9250 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor:Stepper_Motor_bipolar M?
+L Motor:Stepper_Motor_bipolar M2
 U 1 1 5E23B025
 P 9850 3900
-F 0 "M?" H 10050 3950 50  0000 L CNN
+F 0 "M2" H 10050 3950 50  0000 L CNN
 F 1 "Window 2" H 10050 3850 50  0000 L CNN
 F 2 "" H 9860 3890 50  0001 C CNN
 F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 9860 3890 50  0001 C CNN
@@ -637,10 +601,10 @@ Wire Wire Line
 Wire Wire Line
 	9450 3800 9550 3800
 $Comp
-L ProjectCustom:SBT0811 U?
+L ProjectCustom:SBT0811 U7
 U 1 1 5E2BC2AB
 P 9250 4800
-F 0 "U?" H 9225 5365 50  0000 C CNN
+F 0 "U7" H 9225 5365 50  0000 C CNN
 F 1 "SBT0811" H 9225 5274 50  0000 C CNN
 F 2 "" H 9250 4900 50  0001 C CNN
 F 3 "" H 9250 4900 50  0001 C CNN
@@ -648,10 +612,10 @@ F 3 "" H 9250 4900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor:Stepper_Motor_bipolar M?
+L Motor:Stepper_Motor_bipolar M3
 U 1 1 5E2BC7BC
 P 9850 5550
-F 0 "M?" H 10050 5600 50  0000 L CNN
+F 0 "M3" H 10050 5600 50  0000 L CNN
 F 1 "Window 3" H 10050 5500 50  0000 L CNN
 F 2 "" H 9860 5540 50  0001 C CNN
 F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 9860 5540 50  0001 C CNN
@@ -695,10 +659,10 @@ Wire Wire Line
 Wire Wire Line
 	9350 5650 9550 5650
 $Comp
-L Connector:Conn_01x04_Female J?
+L Connector:Conn_01x04_Female J5
 U 1 1 5E312BCF
 P 8050 1700
-F 0 "J?" H 8000 1900 50  0000 L CNN
+F 0 "J5" H 8000 1900 50  0000 L CNN
 F 1 " " H 8078 1585 50  0000 L CNN
 F 2 "" H 8050 1700 50  0001 C CNN
 F 3 "~" H 8050 1700 50  0001 C CNN
@@ -706,10 +670,10 @@ F 3 "~" H 8050 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x02_Male P?
+L Connector:Conn_01x02_Male P4
 U 1 1 5E35213B
 P 8150 1200
-F 0 "P?" H 8200 1300 50  0000 C CNN
+F 0 "P4" H 8200 1300 50  0000 C CNN
 F 1 " " H 8258 1290 50  0000 C CNN
 F 2 "" H 8150 1200 50  0001 C CNN
 F 3 "~" H 8150 1200 50  0001 C CNN
@@ -717,10 +681,10 @@ F 3 "~" H 8150 1200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x02_Female J?
+L Connector:Conn_01x02_Female J4
 U 1 1 5E35378E
 P 8050 1200
-F 0 "J?" H 8000 1300 50  0000 L CNN
+F 0 "J4" H 8000 1300 50  0000 L CNN
 F 1 " " H 8078 1085 50  0000 L CNN
 F 2 "" H 8050 1200 50  0001 C CNN
 F 3 "~" H 8050 1200 50  0001 C CNN
@@ -728,10 +692,10 @@ F 3 "~" H 8050 1200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x04_Male P?
+L Connector:Conn_01x04_Male P5
 U 1 1 5E35E72A
 P 8150 1700
-F 0 "P?" H 8200 1900 50  0000 C CNN
+F 0 "P5" H 8200 1900 50  0000 C CNN
 F 1 " " H 8258 1890 50  0000 C CNN
 F 2 "" H 8150 1700 50  0001 C CNN
 F 3 "~" H 8150 1700 50  0001 C CNN
@@ -755,10 +719,10 @@ OR
 Text Label 8400 1900 0    50   ~ 0
 WH
 $Comp
-L Connector:Conn_01x04_Female J?
+L Connector:Conn_01x04_Female J6
 U 1 1 5E1FF055
 P 8050 2100
-F 0 "J?" H 8000 1800 50  0000 L CNN
+F 0 "J6" H 8000 1800 50  0000 L CNN
 F 1 " " H 8078 1985 50  0000 L CNN
 F 2 "" H 8050 2100 50  0001 C CNN
 F 3 "~" H 8050 2100 50  0001 C CNN
@@ -766,10 +730,10 @@ F 3 "~" H 8050 2100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x04_Male P?
+L Connector:Conn_01x04_Male P6
 U 1 1 5E200D23
 P 8150 2100
-F 0 "P?" H 8200 1800 50  0000 C CNN
+F 0 "P6" H 8200 1800 50  0000 C CNN
 F 1 " " H 8258 2290 50  0000 C CNN
 F 2 "" H 8150 2100 50  0001 C CNN
 F 3 "~" H 8150 2100 50  0001 C CNN
@@ -821,10 +785,10 @@ Wire Wire Line
 Wire Wire Line
 	8400 3450 8800 3450
 $Comp
-L Connector:Conn_01x02_Male P?
+L Connector:Conn_01x02_Male P3
 U 1 1 5E2E3A43
 P 8000 2950
-F 0 "P?" H 8050 3050 50  0000 C CNN
+F 0 "P3" H 8050 3050 50  0000 C CNN
 F 1 " " H 8108 3040 50  0000 C CNN
 F 2 "" H 8000 2950 50  0001 C CNN
 F 3 "~" H 8000 2950 50  0001 C CNN
@@ -834,10 +798,10 @@ $EndComp
 Wire Wire Line
 	8350 2850 8800 2850
 $Comp
-L Connector:Conn_01x02_Female J?
+L Connector:Conn_01x02_Female J3
 U 1 1 5E307EF0
 P 7950 2950
-F 0 "J?" H 7900 3050 50  0000 L CNN
+F 0 "J3" H 7900 3050 50  0000 L CNN
 F 1 " " H 7978 2835 50  0000 L CNN
 F 2 "" H 7950 2950 50  0001 C CNN
 F 3 "~" H 7950 2950 50  0001 C CNN
@@ -871,10 +835,10 @@ OR
 Text Label 8400 2600 1    50   ~ 0
 WH
 $Comp
-L Connector:Conn_01x04_Female J?
+L Connector:Conn_01x04_Female J8
 U 1 1 5E391F1F
 P 8200 4900
-F 0 "J?" H 8100 5100 50  0000 L CNN
+F 0 "J8" H 8100 5100 50  0000 L CNN
 F 1 " " H 8228 4785 50  0000 L CNN
 F 2 "" H 8200 4900 50  0001 C CNN
 F 3 "~" H 8200 4900 50  0001 C CNN
@@ -890,10 +854,10 @@ Wire Wire Line
 Wire Wire Line
 	8450 5100 8800 5100
 $Comp
-L Connector:Conn_01x02_Female J?
+L Connector:Conn_01x02_Female J7
 U 1 1 5E40AA06
 P 8200 4500
-F 0 "J?" H 8100 4600 50  0000 L CNN
+F 0 "J7" H 8100 4600 50  0000 L CNN
 F 1 " " H 8228 4385 50  0000 L CNN
 F 2 "" H 8200 4500 50  0001 C CNN
 F 3 "~" H 8200 4500 50  0001 C CNN
@@ -901,10 +865,10 @@ F 3 "~" H 8200 4500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x02_Male P?
+L Connector:Conn_01x02_Male P7
 U 1 1 5E40B3CA
 P 8250 4500
-F 0 "P?" H 8300 4600 50  0000 C CNN
+F 0 "P7" H 8300 4600 50  0000 C CNN
 F 1 " " H 8358 4590 50  0000 C CNN
 F 2 "" H 8250 4500 50  0001 C CNN
 F 3 "~" H 8250 4500 50  0001 C CNN
@@ -920,10 +884,10 @@ GN
 Text Label 8550 4600 0    50   ~ 0
 BE
 $Comp
-L Connector:Conn_01x04_Male P?
+L Connector:Conn_01x04_Male P8
 U 1 1 5E39493B
 P 8250 4900
-F 0 "P?" H 8300 5100 50  0000 C CNN
+F 0 "P8" H 8300 5100 50  0000 C CNN
 F 1 " " H 8358 5090 50  0000 C CNN
 F 2 "" H 8250 4900 50  0001 C CNN
 F 3 "~" H 8250 4900 50  0001 C CNN
@@ -951,8 +915,8 @@ Text Label 8150 3950 0    50   ~ 0
 Text Label 8150 4050 0    50   ~ 0
 GND
 Wire Wire Line
-	5805 2750 6025 2750
-Text Label 5845 2750 0    50   ~ 0
+	5800 2750 6020 2750
+Text Label 5840 2750 0    50   ~ 0
 GND
 Text Label 3790 3050 0    50   ~ 0
 GND
@@ -981,7 +945,7 @@ YE
 Wire Wire Line
 	4200 2650 3800 2650
 Connection ~ 3800 2650
-Text Label 3915 2650 0    118  ~ 0
+Text Label 4135 2650 0    118  ~ 0
 .
 Wire Wire Line
 	4200 2850 3800 2850
@@ -1015,9 +979,9 @@ Wire Wire Line
 	7745 3600 7745 5100
 Wire Wire Line
 	7745 5100 8000 5100
-Text Label 3915 2850 0    118  ~ 0
+Text Label 4135 2850 0    118  ~ 0
 .
-Text Label 3920 3650 0    118  ~ 0
+Text Label 4145 3650 0    118  ~ 0
 .
 Text Label 7655 3300 0    118  ~ 0
 .
@@ -1090,7 +1054,6 @@ Text Label 3355 3650 0    118  ~ 0
 .
 Wire Wire Line
 	7250 4400 6460 4400
-Connection ~ 3900 4400
 Text Label 7055 4400 0    118  ~ 0
 .
 Wire Wire Line
@@ -1098,8 +1061,6 @@ Wire Wire Line
 Wire Wire Line
 	6460 2200 6460 2700
 Connection ~ 6460 4400
-Wire Wire Line
-	6460 4400 3900 4400
 Text Label 6740 2200 0    118  ~ 0
 .
 Wire Wire Line
@@ -1130,10 +1091,10 @@ Text Label 1200 5820 3    50   ~ 0
 BR
 NoConn ~ 7650 4200
 $Comp
-L Connector_Generic:Conn_2Rows-07Pins P?
+L Connector_Generic:Conn_2Rows-07Pins P1
 U 1 1 5E1245C8
 P 1500 5600
-F 0 "P?" H 1550 5800 50  0000 C CNN
+F 0 "P1" H 1550 5800 50  0000 C CNN
 F 1 " " H 1550 5826 50  0000 C CNN
 F 2 "" H 1500 5600 50  0001 C CNN
 F 3 "~" H 1500 5600 50  0001 C CNN
@@ -2790,4 +2751,125 @@ E7 B3 61 D1 64 F1 6E 48 DD A0 49 3D 03 E6 66 96 DC 32 11 29 71 19 C8 6A 29 95 58
 44 AE 42 60 82 
 EndData
 $EndBitmap
+Text Label 2040 2950 0    118  ~ 0
+.
+Text Label 3715 2500 0    118  ~ 0
+.
+Text Label 2040 3050 0    118  ~ 0
+.
+Text Label 3715 2950 0    118  ~ 0
+.
+Text Label 1240 2950 0    118  ~ 0
+.
+Text Label 3635 3450 0    118  ~ 0
+.
+Text Label 2040 3150 0    118  ~ 0
+.
+Text Label 4145 3550 0    118  ~ 0
+.
+Text Label 2040 3250 0    118  ~ 0
+.
+Text Label 7820 1200 0    118  ~ 0
+.
+Text Label 7740 2950 0    118  ~ 0
+.
+Text Label 8045 3950 0    118  ~ 0
+.
+Text Label 7985 4600 0    118  ~ 0
+.
+Text Label 1350 2795 0    118  ~ 0
+.
+Text Label 2600 1815 0    118  ~ 0
+.
+Text Label 1385 3350 0    118  ~ 0
+.
+Text Label 4825 5650 0    50   ~ 0
+GY
+Text Label 4840 5750 0    50   ~ 0
+VI
+Text Label 4835 5850 0    50   ~ 0
+BE
+Wire Wire Line
+	4800 5850 4965 5850
+Wire Wire Line
+	4965 5850 4965 6100
+Wire Wire Line
+	4965 6100 5100 6100
+Wire Wire Line
+	5065 5650 5065 5750
+Wire Wire Line
+	5065 5750 5100 5750
+Wire Wire Line
+	4800 5650 5065 5650
+Wire Wire Line
+	4800 5750 5000 5750
+Wire Wire Line
+	5000 5750 5000 5400
+Wire Wire Line
+	5000 5400 5100 5400
+Wire Wire Line
+	4200 3350 4095 3350
+Wire Wire Line
+	4095 3350 4095 5650
+Wire Wire Line
+	4095 5650 4300 5650
+Wire Wire Line
+	3300 4400 4000 4400
+Wire Wire Line
+	4300 5750 4000 5750
+Wire Wire Line
+	4000 5750 4000 4400
+Connection ~ 4000 4400
+Wire Wire Line
+	4000 4400 6460 4400
+Wire Wire Line
+	4300 5850 3905 5850
+Wire Wire Line
+	3905 5850 3905 4050
+Wire Wire Line
+	3905 4050 2400 4050
+Text Label 4155 5850 0    50   ~ 0
+3V3
+Text Label 4155 5750 0    50   ~ 0
+GND
+Text Label 4155 5650 0    50   ~ 0
+OUT
+Text Label 4100 5850 0    118  ~ 0
+.
+Text Label 4100 5750 0    118  ~ 0
+.
+Text Label 4100 5650 0    118  ~ 0
+.
+Text Label 4145 3350 0    118  ~ 0
+.
+Text Label 3345 1800 0    118  ~ 0
+.
+Text Label 3500 1950 0    118  ~ 0
+.
+Text Label 2845 2300 0    118  ~ 0
+.
+Text Label 2400 2740 0    118  ~ 0
+.
+Text Label 2500 4050 0    118  ~ 0
+.
+Text Label 3905 4975 2    118  ~ 0
+.
+Text Label 4145 3450 0    118  ~ 0
+.
+Text Label 5065 1750 0    118  ~ 0
+.
+Text Label 6200 1945 0    118  ~ 0
+.
+Text Label 6740 2100 0    118  ~ 0
+.
+Text Label 6765 3800 0    118  ~ 0
+.
+Text Label 6765 3500 0    118  ~ 0
+.
+Text Label 6745 1800 0    118  ~ 0
+.
+Text Label 5060 1500 0    118  ~ 0
+.
+Text Label 4140 2950 0    118  ~ 0
+.
 $EndSCHEMATC
