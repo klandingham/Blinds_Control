@@ -75,8 +75,20 @@ unsigned calibrateFlashTime;
 bool calibrateLEDOn = false;
 unsigned lastLoopTime = 0;
 
-// Values for two-phase, full-step operation (AB->BC->CD->DA)
 const int fullStepValueCount = 4;
+// values for two-phase, full-step operation (AB->BC->CD->DA)
+// examples:
+//
+// single motor:
+//  1100 (12)
+//  0110 (6)
+//  0011 (3)
+//  1001 (9)
+// two motors:
+//  11001100 (204)
+//  01100110 (102)
+//  00110011 (51)
+//  10011001 (153)
 int TF_stepperValues1[4]   = {  12,     6,    3,    9};
 int TF_stepperValues2[4]   = { 192,    96,   48,  144};
 int TF_stepperValues3[4]   = {3072,  1536,  768, 2304};

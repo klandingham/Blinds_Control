@@ -2,7 +2,7 @@ TODO.txt
 
 Sun Mar 15 13:53:51 EDT 2020
 ============================
-[ ] Create duplicate "working" KiCAD files to be used while
+[x] Create duplicate "working" KiCAD files to be used while
 wiring the main board: as each connection is completed,
 remove it from the diagram.
 
@@ -10,7 +10,7 @@ remove it from the diagram.
 
 Tue Jan 21 23:34:00 EDT 2020
 ============================
-[ ] Pull-up resistors need to be added to board.
+[x] Pull-up resistors need to be added to board.
 
 [x] The sockets for the shift register ICs are the wrong size!
 They are 14-pin sockets. The ICs are 16-pin. Current sockets
