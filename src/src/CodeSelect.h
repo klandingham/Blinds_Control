@@ -5,9 +5,9 @@
 
 // Code for specific boards
 #define NODE_MCU
-// #define WAVGAT
+//#define WAVGAT
 
-// Testing code
-// #define BLINK_TEST
-// #define IR_TEST
-// #define NODEMCU_IR_TEST
+//Testing code
+//#define BLINK_TEST
+//#define IR_TEST
+//#define NODEMCU_IR_TEST
