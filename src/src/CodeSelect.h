@@ -3,11 +3,15 @@
  * code for particular boards, running test code, etc.
  */
 
-// Code for specific boards
-#define NODE_MCU
+// ApplicationCode for specific boards
+
+//#define NODE_MCU
 //#define WAVGAT
 
-//Testing code
+// Testing code
+
 //#define BLINK_TEST
 //#define IR_TEST
+//#define SERIAL_TEST
 //#define NODEMCU_IR_TEST
+#define SIGNALS_TEST
